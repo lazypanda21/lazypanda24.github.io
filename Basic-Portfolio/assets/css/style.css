@@ -1,0 +1,129 @@
+body{
+  background-image: url("assets/image/pipe.png");
+}
+.name{
+  float:left;
+  width:180px;
+  height:50px;
+  margin-left: 250px;
+  text-align: center;
+  padding-top: 25px;
+  font-family: Georgia;
+  font-size: 20px;
+  color:white;
+  background-color: #4aaaa5;
+}
+
+.links{
+  float:left;
+  width:300px;
+  height:50px;
+  text-align: center;
+  padding-top: 15px;
+  margin-left: 525px;
+  font-family: Arial;
+  background-color: white;
+}
+
+.main{
+  float: left;
+  margin-top: 25px;
+  margin-left: 250px;
+  width: 960px;
+  background-color: white;
+  border: 1px solid #cccccc;
+}
+.text{
+  font-family: Arial;
+  font-size: 15px;
+  color:#777777;
+  text-decoration: none;
+}
+.head-text{
+  position: relative;
+  font-family: Georgia;
+  font-size: 20px;
+  color: #4aaaa5;
+  text-align: left;
+  margin-left: 10px;
+}
+img{
+  float:left;
+  width:250px;
+  height: 200px;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-bottom: 20px;
+}
+.header{
+  float: left;
+  align-content: flex-end;
+}
+.dis{
+  padding-left: 10px;
+  padding-top: 0px;
+}
+
+.fish,.bp,.vr,.game{
+  position: relative;
+  float:left;
+}
+.inside1,.inside3{
+  position: absolute;
+  margin-left: 10px;
+  height: 50px;
+  top: 150px;
+  width:250px;
+  vertical-align: middle;
+  line-height: 60px;
+  text-align: center;
+  background-color: #4aaaa5;
+
+}
+.inside2,.inside4{
+  margin-left: 40px;
+  position: absolute;
+  height: 50px;
+  top: 150px;
+  width:250px;
+  vertical-align: middle;
+  line-height: 60px;
+  text-align: center;
+  background-color: #4aaaa5;
+
+}
+p.clear{
+  clear:both;
+}
+a:link{
+  color:white;
+  font-family: Arial;
+  text-decoration: none;
+}
+.contacttext{
+  color:#777777;
+  font-family: Arial;
+  margin-left: 10px;
+}
+.input{
+  margin-left: 10px;
+  width: 930px;
+  height: 25px;
+  margin-bottom: 30px;
+}
+.input2{
+  margin-left: 10px;
+  width: 930px;
+  height: 100px;
+  margin-bottom: 30px;
+}
+footer{
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #666666;
+   color: white;
+   text-align: center;
+   height:50px;
+}

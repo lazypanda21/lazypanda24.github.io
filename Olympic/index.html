@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Olympic Rings CSS positioning</title>
+    <style>
+    .container{
+      width: 300px;
+      position:relative;
+      padding-top: 56.25%;
+    }
+    .ring{
+      width: 90px;
+      height: 90px;
+      border-radius: 45px;
+      border: 2px solid black;
+      position: absolute;;
+    }
+    .ring1{
+      top:0;
+      left:50%;
+    }
+    .ring2{
+      top:0;
+      left:0;
+      margin-left: -15%;
+    }
+    .ring3{
+      top:0;
+      right:0;
+    }
+    .ring4{
+      top:45px;
+      right:98px;
+      margin-left: -45px;
+    }
+    .ring5{
+      top:45px;
+      right:203px;
+      margin-left: -45px;
+    }
+    </style>
+
+  </head>
+  <body>
+<div class = "container">
+  <div class ="ring ring1"></div>
+  <div class ="ring ring2"></div>
+  <div class ="ring ring3"></div>
+  <div class ="ring ring4"></div>
+  <div class ="ring ring5"></div>
+</div>
+  </body>
+</html>
