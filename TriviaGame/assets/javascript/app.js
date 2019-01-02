@@ -60,18 +60,10 @@ function countDown() {
     });
     var i = 10;
     var myInterval = setInterval(function() {
-
-        if (i < 3) {
-            $('#timerSeconds').html("0" + i);
+        $('#timerSeconds').html( i);
             $(".pickAnswer").on("click", function() {
                 clearInterval(myInterval);
-            })
-        } else {
-            $('#timerSeconds').html(i);
-            $(".pickAnswer").on("click", function() {
-                clearInterval(myInterval);
-            })
-        }
+            });
 
         if (i === 0) {
             unansweredCounter++;
