@@ -1,0 +1,53 @@
+body {
+
+    background-image: url("../images/bg.jpg");
+}
+
+
+.parallax-container {
+    height: 1020px;
+    padding-bottom: 100px;
+}
+
+#parall {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 1010px;
+    width: 100%;
+}
+
+#questionSpace {
+    color: white;
+    margin-top: 100px;
+    padding: 10px;
+    width: 1000px;
+    height: 600px;
+}
+
+#question {
+    font-size: 30px;
+}
+
+#timer {
+    color: white;
+    font-size: 47px;
+}
+
+#choices {
+    font-size: 23px;
+}
+
+.pickAnswer {
+    border: solid 5px #fff;
+}
+
+.pickAnswer, .pickAnswer:hover {
+    display: block;
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.pickAnswer:hover {
+    border: solid 5px #f1c40f;
+    cursor: pointer;
+}

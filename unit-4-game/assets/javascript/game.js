@@ -65,54 +65,6 @@ var characters = {
 			}
 };
 
-function reset() {
-
-	$("#picRow").show();
-
-	$(".restart").hide();
- // dont forget to hide the restart when its not in the attack
-	$(".attackButton").show();
-
-	var myChar = "";
-	var myDef = "";
-
- // reset everything
-	characters.Leia.healthPoints = 100;
-  // console.log(characters.Leia.healthPoints );
-	characters.Maul.healthPoints = 150;
-	characters.Yoda.healthPoints = 190;
-	characters.Darthvader.healthPoints = 180;
-
-
-	characters.Leia.attackPower = 5;
-	characters.Maul.attackPower = 20;
-	characters.Yoda.attackPower = 30;
-	characters.Darthvader.attackPower = 15;
-
-
-	$(".youAttacked").empty();
-	$(".attackedBack").empty();
-	$(".youDefeated").empty();
-	$(".youWon").empty();
-	$(".youLose").empty();
-	$(".noEnemy").empty();
-
-	$(".name0").html(characters.Leia.fullName);
-	$(".name1").html(characters.Maul.fullName);
-	$(".name2").html(characters.Yoda.fullName);
-	$(".name3").html(characters.Darthvader.fullName);
-
-	$("#leia").appendTo("#picRow");
-	$("#maul").appendTo("#picRow");
-	$("#yoda").appendTo("#picRow");
-	$("#vader").appendTo("#picRow");
-
-	$(".leiahp").html(characters.Leia.healthPoints);
-	$(".maulhp").html(characters.Maul.healthPoints);
-	$(".yodahp").html(characters.Yoda.healthPoints);
-	$(".vaderhp").html(characters.Darthvader.healthPoints);
-
-};
 
 $(document).ready(function(){
 	reset();
@@ -247,4 +199,53 @@ $(document).ready(function(){
  			$(".youLose").html("You've been defeated...GAME OVER!!!")
  		}
  });
+
 });
+function reset() {
+
+	$("#picRow").show();
+
+	$(".restart").hide();
+ // dont forget to hide the restart when its not in the attack
+	$(".attackButton").show();
+
+	var myChar = "";
+	var myDef = "";
+
+ // reset everything
+	characters.Leia.healthPoints = 100;
+  // console.log(characters.Leia.healthPoints );
+	characters.Maul.healthPoints = 150;
+	characters.Yoda.healthPoints = 190;
+	characters.Darthvader.healthPoints = 180;
+
+
+	characters.Leia.attackPower = 5;
+	characters.Maul.attackPower = 20;
+	characters.Yoda.attackPower = 30;
+	characters.Darthvader.attackPower = 15;
+
+
+	$(".youAttacked").empty();
+	$(".attackedBack").empty();
+	$(".youDefeated").empty();
+	$(".youWon").empty();
+	$(".youLose").empty();
+	$(".noEnemy").empty();
+
+	$(".name0").html(characters.Leia.fullName);
+	$(".name1").html(characters.Maul.fullName);
+	$(".name2").html(characters.Yoda.fullName);
+	$(".name3").html(characters.Darthvader.fullName);
+
+	$("#leia").appendTo("#picRow");
+	$("#maul").appendTo("#picRow");
+	$("#yoda").appendTo("#picRow");
+	$("#vader").appendTo("#picRow");
+
+	$(".leiahp").html(characters.Leia.healthPoints);
+	$(".maulhp").html(characters.Maul.healthPoints);
+	$(".yodahp").html(characters.Yoda.healthPoints);
+	$(".vaderhp").html(characters.Darthvader.healthPoints);
+
+}
