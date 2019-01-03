@@ -96,18 +96,17 @@ function postQuestion(n) {
 
 
     } else {
-        resetGame(); // the conditional successfully loops the game
+        resetGame();
     }
 
     $(".pickAnswer").on("click", function() {
-        var userChoice = $(this).attr('indexnum'); // stored as a string not a number
+        var userChoice = $(this).attr('indexnum');
         userChoice = parseInt(userChoice);
 
-        // checks if user is correct and will tally accordingly
+        // check if the user is correct and then record the points
         if (userChoice === questions[currentQuestionIndex].answer) {
             correctCounter++;
             currentQuestionIndex++
-            randomCongrats();
 
         } else {
             incorrectCounter++;
@@ -118,6 +117,7 @@ function postQuestion(n) {
     })
 }
 
+// init the trivia game 
 function startTrivia() {
     $('#messageSection').hide();
     $('#gameMessage').empty()
