@@ -1,0 +1,8 @@
+.custom{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.col-fixed-900{
+    height: 900px;
+}
