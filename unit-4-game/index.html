@@ -1,55 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Star Wars RPG</title>
-
+	<title>Star Wars</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-  <script type="text/javascript" src = "assets/javascript/game.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Lekton:700" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<script type="text/javascript" src = "assets/javascript/game.js"></script>
 
 </head>
 <body>
 		<div class = "row">
 			<div class = "col-6">
 			</div>
+
 			<div class = "col-6" id = "RPG">
 			Star Wars
 			</div>
 		</div>
 
 		<div class = "row" id = "picRow" style = "margin-left: 22px;">
-
-			<div class = "col-2 firstRow _0 float" id = "leia" value = "Princess Leia">
-
-			<p class = "name name0 r0" value = "0">Princess Leia</p>
-			<img src="assets/images/leia.jpg" id = "image1"><br>
+			<div class = "col-2 firstRow _0 float" id = "Leia" value = "Leia">
+			<p class = "name nameo r0" value = "0">Leia</p>
+			<img src="assets/images/leia.jpg" id = "imageo"><br>
 			<p class = "HP leiahp Leia r0"></p>
 			</div>
 
-			<div class = "col-2 firstRow _1 float" id = "maul" value = "maul">
-
-			<p class = "name name1 1" value = "1">Death Maul</p>
-			<img src="assets/images/maul.jpg" id = "image2"><br>
+			<div class = "col-2 firstRow _1 float" id = "Maul" value = "Maul">
+			<p class = "name namel 1" value = "1">Maul</p>
+			<img src="assets/images/maul.jpg" id = "imagel"><br>
 			<p class = "HP maulhp Maul 1"></p>
 			</div>
 
-			<div class = "col-2 firstRow _2 float" id = "yoda" value = "yoda">
-
-			<p class = "name name2 2" value = "2">Master Yoda</p>
-			<img src="assets/images/yoda.jpg" id = "image3"><br>
+			<div class = "col-2 firstRow _2 float" id = "Yoda" value = "Yoda">
+			<p class = "name nameds 2" value = "2">Yoda</p>
+			<img src="assets/images/yoda.jpg" id = "imageds"><br>
 			<p class = "HP yodahp Yoda 2"></p>
 			</div>
 
-			<div class = "col-2 firstRow _3 float" id = "vader" value = "vader">
-
-			<p class = "name name3 3" value = "3">Darth Vader</p>
-			<img src="assets/images/vader.jpg" id = "image4"><br>
-			<p class = "HP vaderhp Vader 3"></p>
+			<div class = "col-2 firstRow _3 float" id = "Darthvader" value = "Darthvader">
+			<p class = "name namedm 3" value = "3">Darth Vader</p>
+			<img src="assets/images/vader.jpg" id = "imagedm"><br>
+			<p class = "HP darthmhp Darthvader 3"></p>
 			</div>
 		</div>
-
 
 		<div class = "row padLeft">
 			<div class = "col-12">
@@ -57,11 +53,9 @@
 			</div>
 		</div>
 
-
 		<div class = "row padLeft">
 			<div class = "col-12" id = "yourChar"></div>
 		</div>
-
 
 		<div class = "row padLeft">
 			<div class = "col-12">
@@ -69,14 +63,12 @@
 			</div>
 		</div>
 
-
 		<div class = "row padLeft empty">
-      <div class = "col-12 enemy"  id = "enemies0"></div>
 			<div class = "col-12 enemy"  id = "enemies1"></div>
+			<div class = "col-12 enemy"  id = "enemies0"></div>
 			<div class = "col-12 enemy"  id = "enemies2"></div>
 			<div class = "col-12 enemy"  id = "enemies3"></div>
 		</div>
-
 
 		<div class = "row padLeft">
 			<div class = "col-12">
@@ -84,13 +76,11 @@
 			</div>
 		</div>
 
-
 		<div class = "row padLeft">
 			<div class = "col-12 attackButton">
-			<button type="button" class="btn btn-danger">Attack</button>
+			<button style = "font-size: 20px; color: red; font-family: 'Lekton', sans-serif;">Attack</button>
 			</div>
 		</div>
-
 
 		<div class = "row padLeft">
 			<div class = "col-12">
@@ -98,11 +88,9 @@
 			</div>
 		</div>
 
-
 		<div class = "row padLeft" style = "padding:0px">
 			<div class = "col-12" id = "defender"></div>
 		</div>
-
 
 		<div class = "row padLeft">
 			<div class = "col-12">
@@ -116,10 +104,9 @@
 			</div>
 		</div>
 
-
 		<div class = "row padLeft">
 			<div class = "col-12 padLeft">
-			<button type="button" class="btn btn-success restart">Restart</button>
+			<button class = "restart" style = "font-size: 20px; color:white font-family: 'Lekton', sans-serif;">Restart</button>
 			</div>
 		</div>
 

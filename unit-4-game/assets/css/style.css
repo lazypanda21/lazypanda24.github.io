@@ -4,6 +4,7 @@ body {
 
 #RPG {
 	font-size: 54px;
+	font-family: 'Lekton', sans-serif;
 }
 
 .firstRow{
@@ -12,35 +13,45 @@ body {
 	border-color: white;
 	box-sizing: border-box;
 	outline-style: solid;
-	outline-color: green;
+	outline-color: limegreen;
 	outline-width: 3px;
 	align-items: center;
-	background-color: white;
+
+
 }
 
 .name, .HP {
 	text-align: center;
 	font-size: 12px;
+	font-family: 'Lekton', sans-serif;
 	margin-bottom: 0px;
-
+  color:blue;
 }
 
-#image1, #image2, #image3, #image4 {
+#imageo, #imagel, #imageds, #imagedm {
 	width: 96%;
 	height: 65%;
 
 }
 
+.col-12 {
+
+	font-size: 15px;
+	font-family: 'Lekton', sans-serif;
+  color:white;
+}
+
 .padLeft {
 	padding-left: 20px;
 	padding-top: 3px;
+
+
 }
 
 #picRow {
 	width: 59%;
 
 }
-
 .float {
 	float: left;
 }
