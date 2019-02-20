@@ -1,2 +1,7 @@
 command log at: 22:12:33. Params: spotify-this-song; love; 
 command log at: 22:16:08. Params: do-what-it-says; undefined; 
+command log at: 23:10:07. Params: spotify-this-song; as; 
+command log at: 23:10:31. Params: spotify-this-song; ride; 
+command log at: 23:11:40. Params: do-what-it-says; undefined; 
+command log at: 23:16:00. Params: spotify-this-song; ride; 
+command log at: 23:16:37. Params: do-what-it-says; undefined; 
