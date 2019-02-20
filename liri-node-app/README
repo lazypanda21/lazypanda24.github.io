@@ -1,0 +1,4 @@
+# LIRI Node App
+
+* LIRI will take in user input and base on their search type and content,
+* retrieve the data with different apis and show them on the terminal

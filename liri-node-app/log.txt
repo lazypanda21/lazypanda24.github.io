@@ -1,0 +1,2 @@
+command log at: 22:12:33. Params: spotify-this-song; love; 
+command log at: 22:16:08. Params: do-what-it-says; undefined; 
