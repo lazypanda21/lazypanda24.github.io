@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<title>FriendFinder</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+	<title>Energy Consumption</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
@@ -18,12 +18,28 @@
 
 <style>
 .jumbotron{
-  background: pink;
+  background: #b3ffb3;
 }
 img{
   height: 30%;
   width:30%;
 }
+  .input-color {
+      position: relative;
+  }
+  .input-color input {
+      padding-left: 20px;
+  }
+  .input-color .color-box {
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+      background-color: #ccc;
+      position: absolute;
+      left: 5px;
+      top: 5px;
+  }
+
 </style>
 <header>
   <div class="jumbotron">
@@ -40,8 +56,9 @@ img{
     		<form class="col s12" id="myForm">
 
           <div class="row">
+            <h5>How many refrigerators are plugged-in and turned on in your home?(0 for none)</h5>
+
             <div class="col s12">
-              <h5>How many refrigerators are plugged-in and turned on in your home?(0 for none)</h5>
               <div class="input-field inline">
                 <input id="fridgenum" type="text" class="validate">
            </div>
@@ -49,8 +66,9 @@ img{
        </div>
 
        <div class="row">
+         <h5>How many stoves are used in your home?(0 for none)</h5>
+
          <div class="col s12">
-           <h5>How many stoves are used in your home?(0 for none)</h5>
            <div class="input-field inline">
              <input id="stovenum" type="text" class="validate">
         </div>
@@ -59,10 +77,10 @@ img{
 
 				  <div class="row">
       			<h5>What fuel does your stove use?</h5>
-      		  <div class="input-field col s12">
-					    <select class="chosen" id="q3">
+      		  <div class="col s12">
+					    <select class="chosenone" id="fuel">
 					      <option value="" disabled selected>Choose your option</option>
-					      <option value="Electricity">Electricity (Strongly Disagree)</option>
+					      <option value="Electricity">Electricity </option>
 					      <option value="Natural Gas">Natural Gas</option>
 					      <option value="Propane">Propane</option>
 					    </select>
@@ -107,19 +125,50 @@ img{
 		</div>
 
 <!--modal---->
-<div id="modal1" class="modal">
+
+
+<!-- <div id="modal1" class="modal">
   	<div class="modal-header">
   	</div>
     <div class="modal-content center-align">
-    	<h3>Your energy consuption bar is </h3>
+    	<h3>Your energy consuption bar consists of  </h3>
     	<hr>
-      <h4 id="matchName"></h4>
-      <img id="matchImg" height="300px" width="300px"></img>
+      <h4 id="redblock">Red Blocks : </h4>
+      <h4 id="whiteblock">White Blocks : </h4>
     </div>
-  </div>
+  </div> -->
+
+
+  <!-- Modal Trigger -->
+
+ <!-- Modal Structure -->
+ <div id="modal1" class="modal">
+   <div class="modal-content">
+     <h4>Your Engergy Bar consists of :</h4>
+     <div class="input-color">
+           <div class="color-box" style="background-color: #FF850A;"></div>
+           <div class = "legend" style = "float: right"> 5 Orange </div>
+       </div>
+     </br>
+
+     <div class="input-color">
+       <div class = "legend" style = "float: right"> 3 Navy </div>
+           <div class="color-box" style="background-color: navy;"></div>
+       </div>
+     </br>
+
+     <div class="input-color">
+       <div class = "legend" style = "float: right"> Red </div>
+           <div class="color-box" style="background-color: red;"></div>
+       </div>
+     </br>
+   </div>
+
+ </div>
 
 
 <script>
+var userData;
 $(document).ready(function() {
     $('select').material_select();
 	});
@@ -131,52 +180,48 @@ $(document).ready(function() {
   	function validateForm() {
 		  var isValid = true;
 
-		  $('.formInput').each(function() {
+		  $('.input-field inline').each(function() {
 		  	//console.log($(this).val());
 		    if ( $(this).val() === '' )
 	        isValid = false;
-			  	//console.log(isValid);
-		  });
-		  $('.chosen').each(function() {
-		  	//console.log($(this).val());
-		  	if ( $(this).val() == null )
-	  			isValid = false;
-			  	//console.log(isValid);
+			  	console.log("text not filled");
 		  });
 		  return isValid;
 		}
 
 
 		if (validateForm()) {
-    	var userData = {
-    		name: $("#name").val(),
-    		photo: $("#pic").val(),
-    		scores: [$("#q1").val().trim(),
-        $("#q2").val().trim(),
-        $("#q3").val().trim(),
-        $("#q4").val().trim(),
-        $("#q5").val().trim(),
-        $("#q6").val().trim(),
-        $("#q7").val().trim(),
-        $("#q8").val().trim(),
-        $("#q9").val().trim(),
-        $("#q10").val().trim(), ]
+    	 userData = {
+    		fridgenum: $("#fridgenum").val().trim(),
+        stovenum: $("#stovenum").val().trim(),
+        cooknum: $("#cooknum").val().trim(),
+        cooktime: $("#cooktime").val().trim(),
+        ovennum: $("#ovennum").val().trim(),
     	};
 
+      //
+      // $.post("/api/data", userData, function(data){
+      //   //  convert the energy
+    	// 	$("#redblock").text("3");
+    	// 	$('#whiteblock').text("4");
+      //
+	    //   $("#modal1").openModal();
+    	// });
+      console.log(userData.fridgenum);
 
-      $.post("/api/friends", userData, function(data){
-        console.log(data.name);
-    		$("#matchName").text(data.name);
-    		$('#matchImg').attr("src", data.photo);
-        console.log(data.photo);
-	      $("#modal1").openModal();
-    	});
+      $(document).on("click", "#submit", function (userData) {
+        // $("#redblock").text(userData.fridgenum);
+        // $('#whiteblock').append(userData.fuel);
+         $("#modal1").openModal();
 
-  		$("#name").val("");
-  		$("#pic").val("");
+
+
+
+
+});
+
       var form = document.getElementById("myForm");
       form.reset();
-  		$("#name").focus();
 		}
 
     else {
