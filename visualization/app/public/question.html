@@ -20,10 +20,6 @@
 .jumbotron{
   background: #b3ffb3;
 }
-img{
-  height: 30%;
-  width:30%;
-}
   .input-color {
       position: relative;
   }
@@ -39,6 +35,7 @@ img{
       left: 5px;
       top: 5px;
   }
+
 
 </style>
 <header>
@@ -59,7 +56,7 @@ img{
         <div class="row">
           <h5>How many refrigerators do you have in your home? (0 for none)</h5>
           <div class="col s12">
-            <div class="input-field inline">
+            <div class="input-field inline" required>
               <input id="fridgenum" type="text" class="validate">
          </div>
        </div>
@@ -68,7 +65,7 @@ img{
        <div class="row">
          <h5>What fuel does your stove use?</h5>
          <div class="col s12">
-            <select class="chosenone" id="stovefuel">
+            <select class="chosenone" id="stovefuel" required>
               <option value="" disabled selected>Choose your option</option>
               <option value="Electricity">Electricity </option>
               <option value="Natural Gas">Natural Gas</option>
@@ -81,7 +78,7 @@ img{
 				  <div class="row">
       			<h5>How often do you cook on stove at home on a weekly base? (0 for none)</h5>
             <div class="col s12">
-              <div class="input-field inline">
+              <div class="input-field inline" required>
                 <input id="cooktime" type="text" class="validate">
            </div>
          </div>
@@ -90,8 +87,8 @@ img{
           <div class="row">
             <div class="col s12">
               <h5>How long does it typically take you to cook on stove each day? (minute)</h5>
-              <div class="input-field inline">
-                <input id="cooklength" type="text" class="validate">
+              <div class="input-field inline" required>
+                <input id="cooklength" type="text" class="validate" >
                 <label for="cooklength">Min</label>
            </div>
          </div>
@@ -100,8 +97,8 @@ img{
        <div class="row">
          <div class="col s12">
            <h5>How many stoves do you turn on when you cook?</h5>
-           <div class="input-field inline">
-             <input id="stovenum" type="text" class="validate">
+           <div class="input-field inline" required>
+             <input id="stovenum" type="text" class="validate" >
         </div>
       </div>
     </div>
@@ -109,7 +106,7 @@ img{
        <div class="row">
          <div class="col s12">
           <h5>What fuel does your oven use?</h5>
-          <div class="col s12">
+          <div class="col s12" required>
              <select class="chosenone" id="ovenfuel">
                <option value="" disabled selected>Choose your option</option>
                <option value="Electricity">Electricity </option>
@@ -124,7 +121,7 @@ img{
      <div class="row">
        <div class="col s12">
         <h5>How often do you use the oven at home on a weekly base? (0 for none)</h5>
-         <div class="input-field inline">
+         <div class="input-field inline" required>
            <input id="ovennum" type="text" class="validate">
       </div>
     </div>
@@ -134,7 +131,7 @@ img{
    <div class="row">
      <div class="col s12">
       <h5>How long does it typically take you to use the oven each day? (minute)</h5>
-       <div class="input-field inline">
+       <div class="input-field inline" required>
          <input id="oventime" type="text" class="validate">
          <label for="oventime">Min</label>
     </div>
@@ -145,7 +142,7 @@ img{
  <div class="row">
    <div class="col s12">
     <h5>How often do you use the toaster at home on a weekly base? (0 for none)</h5>
-     <div class="input-field inline">
+     <div class="input-field inline" required>
        <input id="toastertime" type="text" class="validate">
 
   </div>
@@ -156,7 +153,7 @@ img{
  <div class="row">
    <div class="col s12">
     <h5>How long does it typically take you to use the toaster each day? (minute)</h5>
-     <div class="input-field inline">
+     <div class="input-field inline" required>
        <input id="toasterlength" type="text" class="validate">
        <label for="toasterlength">Min</label>
   </div>
@@ -167,7 +164,7 @@ img{
  <div class="row">
    <div class="col s12">
     <h5>How long does it typically take you to use the microwave each day in total? (minute)</h5>
-     <div class="input-field inline">
+     <div class="input-field inline" required>
        <input id="microlength" type="text" class="validate">
        <label for="microlength">Min</label>
   </div>
@@ -178,7 +175,7 @@ img{
  <div class="row">
    <div class="col s12">
     <h5>How often do you use your dishwasher? (0 for none)</h5>
-     <div class="input-field inline">
+     <div class="input-field inline" required>
        <input id="dishtime" type="text" class="validate">
   </div>
 </div>
@@ -188,7 +185,7 @@ img{
  <div class="row">
    <div class="col s12">
     <h5>How long does it typically take you to use the dishwasher each day? (minute)</h5>
-     <div class="input-field inline">
+     <div class="input-field inline" required>
        <input id="dishlength" type="text" class="validate">
        <label for="dishlength">Min</label>
   </div>
@@ -199,7 +196,7 @@ img{
  <div class="row">
    <div class="col s12">
     <h5>How many times do you use clothes washer per week? (0 for none)</h5>
-     <div class="input-field inline">
+     <div class="input-field inline" required>
        <input id="washertime" type="text" class="validate">
   </div>
 </div>
@@ -209,7 +206,7 @@ img{
  <div class="row">
    <div class="col s12">
     <h5>How long does it take each time? (minute)</h5>
-     <div class="input-field inline">
+     <div class="input-field inline" required>
        <input id="washerlength" type="text" class="validate">
        <label for="washerlength">Min</label>
   </div>
@@ -221,7 +218,7 @@ img{
    <div class="col s12">
     <h5>What source does your clothes dryer use?</h5>
     <div class="col s12">
-           <select class="chosenone" id="dryerfuel">
+           <select class="chosenone" id="dryerfuel" required>
              <option value="" disabled selected>Choose your option</option>
              <option value="Electricity">Electricity </option>
              <option value="Natural Gas">Natural Gas</option>
@@ -235,7 +232,7 @@ img{
    <div class="col s12">
     <h5>How many times do you use clothes dryer per week? (0 for none)
 </h5>
-     <div class="input-field inline">
+     <div class="input-field inline" required>
        <input id="dryertime" type="text" class="validate">
   </div>
 </div>
@@ -246,7 +243,7 @@ img{
    <div class="col s12">
     <h5>How long does it take each time? (minute)
 </h5>
-     <div class="input-field inline">
+     <div class="input-field inline" required>
        <input id="dryerlength" type="text" class="validate">
        <label for="dryerlength">Min</label>
   </div>
@@ -258,7 +255,7 @@ img{
    <div class="col s12">
     <h5>What’s the size of the television in your house?</h5>
     <div class="col s12">
-       <select class="chosenone" id="tvsize">
+       <select class="chosenone" id="tvsize" required>
          <option value="" disabled selected>Choose your option</option>
          <option value="30-39">30"-39"</option>
          <option value="40-49">40"-49"</option>
@@ -273,7 +270,7 @@ img{
    <div class="col s12">
     <h5>What type of display does it have?</h5>
     <div class="col s12">
-       <select class="chosenone" id="tvdisplay">
+       <select class="chosenone" id="tvdisplay" required>
          <option value="" disabled selected>Choose your option</option>
          <option value="LCD">LCD</option>
          <option value="Plasma">Plasma</option>
@@ -304,13 +301,13 @@ img{
     <div class = "row">
       <div class = "col s6">
         <h5> Number of desktop computers </h5>
-        <div class="input-field inline">
+        <div class="input-field inline" required>
           <input id="desktopnum" type="text" class="validate">
      </div>
       </div>
       <div class = "col s6">
         <h5> Time of usage each day </h5>
-        <div class="input-field inline">
+        <div class="input-field inline" required>
           <input id="desktoplength" type="text" class="validate">
           <label for="desktoplength">Hour</label>
      </div>
@@ -321,13 +318,13 @@ img{
     <div class = "row">
       <div class = "col s6">
         <h5> Number of laptop computers </h5>
-        <div class="input-field inline">
+        <div class="input-field inline" required>
           <input id="laptopnum" type="text" class="validate">
      </div>
       </div>
       <div class = "col s6">
         <h5> Time of usage each day </h5>
-        <div class="input-field inline">
+        <div class="input-field inline" required>
           <input id="laptoplength" type="text" class="validate">
           <label for="laptoplength">Hour</label>
      </div>
@@ -338,13 +335,13 @@ img{
     <div class = "row">
       <div class = "col s6">
         <h5> Number of tablet computers or e-readers(ie. iPad or Kindle) </h5>
-        <div class="input-field inline">
+        <div class="input-field inline" required>
           <input id="tabnum" type="text" class="validate">
      </div>
       </div>
       <div class = "col s6">
         <h5> Number of smartphones </h5>
-        <div class="input-field inline">
+        <div class="input-field inline" required>
           <input id="phonenum" type="text" class="validate">
      </div>
       </div>
@@ -358,7 +355,7 @@ img{
    <div class="col s12">
     <h5>Is any air conditioning equipment used in your house?</h5>
     <div class="col s12">
-       <select class="chosenone" id="actype">
+       <select class="chosenone" id="actype" required>
          <option value="" disabled selected>Choose your option</option>
          <option value="central">Central</option>
          <option value="window">Window</option>
@@ -373,7 +370,7 @@ img{
    <div class="col s12">
     <h5>How long is it turned on each day? (hour)
 </h5>
-     <div class="input-field inline">
+     <div class="input-field inline" required>
        <input id="aclength" type="text" class="validate">
        <label for="aclength">Hour</label>
   </div>
@@ -410,32 +407,44 @@ img{
    </div>
  </div> -->
 
- <div class="modal fade" id="modal1" tabindex="-1" role="dialog"
-     aria-labelledby="employee-search-Label" aria-hidden="true">
+ <div class="modal fade in" id="modal1" tabindex="-1" role="dialog"
+      aria-hidden="true">
      <div class="modal-dialog" role="document">
-         <div class="modal-content">
-             <div class="modal-header">
-                 <h5 class="modal-title" id="employee-search-label">Your Energy Consumption is</h5>
-                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                     <span aria-hidden="true">&times;</span>
-                 </button>
-             </div>
              <div class="modal-body">
-               <div class = "row">
-                 <div class="col s6" id = "showdata">
+             <div class="modal-header">
+                 <h4 class="modal-title center">Your Energy Consumption is</h4>
+             </div>
 
+               <div class = "row center" id = "showdata">
+
+               </div>
+
+
+               <div class = "row">
+                 <div class="col m6" id = "totalnum">
+                    
                  </div>
-                 <div class="col s6" id = "watts">
-                    Watts
+                 <div class="col m6" id = "image">
+                      <img src="lego.png" style = "height:300px;width:350px"alt="lego">
+                      <p class = "center">Color Scheme </p>
                  </div>
+               </div>
+
+               <div class = "row center" >
+                 <h5> The number of lego pieces represents the weight of the energy consumption of certain category among the total.  </h5>
+
                </div>
              </div>
              <div class="modal-footer">
                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
              </div>
-         </div>
+
      </div>
  </div>
+
+
+
+
 
 
 <script>
@@ -573,16 +582,40 @@ $(document).ready(function() {
     else{
       AC = 2000*365*aclength;
     }
-      var Total = kitchen + laundry + Electronics + AC;
+      var Total = (kitchen + laundry + Electronics + AC);
+      var totalinkw = Math.round(Total/1000);
+      var displaykw = ("<h4> Your Estimate total energy usage is  ") +
+                      totalinkw + ("  KW  </h4>")
+      $("#showdata").append(displaykw);
+      //
+      // console.log(kitchen);
+      // console.log(laundry);
+      // console.log(display);
+      // console.log(Electronics);
+      // console.log(AC);
+      // console.log(Total);
 
-      $("#showdata").text(Total);
+      var redforkitchen = Math.ceil(kitchen/Total*10);
+      var blueforlaundry = Math.ceil(laundry/Total*10);
+      var greenforelectronics = Math.ceil(Electronics/Total*10);
+      var yellowforac = Math.ceil(AC/Total*10);
 
-      console.log(kitchen);
-      console.log(laundry);
-      console.log(display);
-      console.log(Electronics);
-      console.log(AC);
-      console.log(Total);
+      console.log(redforkitchen,blueforlaundry,greenforelectronics,yellowforac);
+
+      var legonum= redforkitchen + blueforlaundry + greenforelectronics + yellowforac;
+
+      var legototal = ("<p>You will need ") + legonum + (" pieces lego in total </p>");
+      var red = ("<p> You need ") + redforkitchen + (" red pieces lego </p>");
+      var blue = ("<p> You need ") + blueforlaundry + (" blue pieces lego </p>");
+      var green =  ("<p> You need ") + greenforelectronics + (" green pieces lego </p>");
+      var yellow = ("<p> You need ") + yellowforac + (" yellow pieces lego </p>");
+      var lol = legototal + red + blue + green + yellow;
+      $("#totalnum").append(lol);
+
+
+
+
+
   });
 
 });
