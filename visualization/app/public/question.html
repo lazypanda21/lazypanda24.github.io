@@ -55,94 +55,340 @@ img{
 		  <div class="row">
     		<form class="col s12" id="myForm">
 
-          <div class="row">
-            <h5>How many refrigerators are plugged-in and turned on in your home?(0 for none)</h5>
-
+        <!-- q1 -->
+        <div class="row">
+          <h5>How many refrigerators do you have in your home? (0 for none)</h5>
+          <div class="col s12">
+            <div class="input-field inline">
+              <input id="fridgenum" type="text" class="validate">
+         </div>
+       </div>
+     </div>
+        <!-- q2 -->
+       <div class="row">
+         <h5>What fuel does your stove use?</h5>
+         <div class="col s12">
+            <select class="chosenone" id="stovefuel">
+              <option value="" disabled selected>Choose your option</option>
+              <option value="Electricity">Electricity </option>
+              <option value="Natural Gas">Natural Gas</option>
+              <option value="Propane">Propane</option>
+            </select>
+          </div>
+      </div>
+    </div>
+          <!-- q3 -->
+				  <div class="row">
+      			<h5>How often do you cook on stove at home on a weekly base? (0 for none)</h5>
             <div class="col s12">
               <div class="input-field inline">
-                <input id="fridgenum" type="text" class="validate">
+                <input id="cooktime" type="text" class="validate">
+           </div>
+         </div>
+				  </div>
+          <!-- q4 -->
+          <div class="row">
+            <div class="col s12">
+              <h5>How long does it typically take you to cook on stove each day? (minute)</h5>
+              <div class="input-field inline">
+                <input id="cooklength" type="text" class="validate">
+                <label for="cooklength">Min</label>
            </div>
          </div>
        </div>
-
+        <!-- q5 -->
        <div class="row">
-         <h5>How many stoves are used in your home?(0 for none)</h5>
-
          <div class="col s12">
+           <h5>How many stoves do you turn on when you cook?</h5>
            <div class="input-field inline">
              <input id="stovenum" type="text" class="validate">
         </div>
       </div>
     </div>
-
-				  <div class="row">
-      			<h5>What fuel does your stove use?</h5>
-      		  <div class="col s12">
-					    <select class="chosenone" id="fuel">
-					      <option value="" disabled selected>Choose your option</option>
-					      <option value="Electricity">Electricity </option>
-					      <option value="Natural Gas">Natural Gas</option>
-					      <option value="Propane">Propane</option>
-					    </select>
-					  </div>
-				  </div>
-
-          <div class="row">
-            <div class="col s12">
-              <h5>How often do you cook at home on a weekly base?(0 for none)</h5>
-              <div class="input-field inline">
-                <input id="cooknum" type="text" class="validate">
+      <!-- q6 -->
+       <div class="row">
+         <div class="col s12">
+          <h5>What fuel does your oven use?</h5>
+          <div class="col s12">
+             <select class="chosenone" id="ovenfuel">
+               <option value="" disabled selected>Choose your option</option>
+               <option value="Electricity">Electricity </option>
+               <option value="Natural Gas">Natural Gas</option>
+               <option value="Propane">Propane</option>
+             </select>
            </div>
+      </div>
+    </div>
+
+    <!-- q7 -->
+     <div class="row">
+       <div class="col s12">
+        <h5>How often do you use the oven at home on a weekly base? (0 for none)</h5>
+         <div class="input-field inline">
+           <input id="ovennum" type="text" class="validate">
+      </div>
+    </div>
+  </div>
+
+  <!-- q8 -->
+   <div class="row">
+     <div class="col s12">
+      <h5>How long does it typically take you to use the oven each day? (minute)</h5>
+       <div class="input-field inline">
+         <input id="oventime" type="text" class="validate">
+         <label for="oventime">Min</label>
+    </div>
+  </div>
+</div>
+
+<!-- q9 -->
+ <div class="row">
+   <div class="col s12">
+    <h5>How often do you use the toaster at home on a weekly base? (0 for none)</h5>
+     <div class="input-field inline">
+       <input id="toastertime" type="text" class="validate">
+
+  </div>
+</div>
+</div>
+
+<!-- q10 -->
+ <div class="row">
+   <div class="col s12">
+    <h5>How long does it typically take you to use the toaster each day? (minute)</h5>
+     <div class="input-field inline">
+       <input id="toasterlength" type="text" class="validate">
+       <label for="toasterlength">Min</label>
+  </div>
+</div>
+</div>
+
+<!-- q11 -->
+ <div class="row">
+   <div class="col s12">
+    <h5>How long does it typically take you to use the microwave each day in total? (minute)</h5>
+     <div class="input-field inline">
+       <input id="microlength" type="text" class="validate">
+       <label for="microlength">Min</label>
+  </div>
+</div>
+</div>
+
+<!-- q12 -->
+ <div class="row">
+   <div class="col s12">
+    <h5>How often do you use your dishwasher? (0 for none)</h5>
+     <div class="input-field inline">
+       <input id="dishtime" type="text" class="validate">
+  </div>
+</div>
+</div>
+
+<!-- q13 -->
+ <div class="row">
+   <div class="col s12">
+    <h5>How long does it typically take you to use the dishwasher each day? (minute)</h5>
+     <div class="input-field inline">
+       <input id="dishlength" type="text" class="validate">
+       <label for="dishlength">Min</label>
+  </div>
+</div>
+</div>
+
+<!-- q14 -->
+ <div class="row">
+   <div class="col s12">
+    <h5>How many times do you use clothes washer per week? (0 for none)</h5>
+     <div class="input-field inline">
+       <input id="washertime" type="text" class="validate">
+  </div>
+</div>
+</div>
+
+<!-- q15 -->
+ <div class="row">
+   <div class="col s12">
+    <h5>How long does it take each time? (minute)</h5>
+     <div class="input-field inline">
+       <input id="washerlength" type="text" class="validate">
+       <label for="washerlength">Min</label>
+  </div>
+</div>
+</div>
+
+<!-- q16 -->
+ <div class="row">
+   <div class="col s12">
+    <h5>What source does your clothes dryer use?</h5>
+    <div class="col s12">
+           <select class="chosenone" id="dryerfuel">
+             <option value="" disabled selected>Choose your option</option>
+             <option value="Electricity">Electricity </option>
+             <option value="Natural Gas">Natural Gas</option>
+           </select>
          </div>
-       </div>
+</div>
+</div>
 
-       <div class="row">
-         <div class="col s12">
-           <h5>How long does it typically take you to cook?</h5>
-           <div class="input-field inline">
-             <input id="cooktime" type="text" class="validate">
-             <label for="cooktime">Min</label>
+<!-- q17 -->
+ <div class="row">
+   <div class="col s12">
+    <h5>How many times do you use clothes dryer per week? (0 for none)
+</h5>
+     <div class="input-field inline">
+       <input id="dryertime" type="text" class="validate">
+  </div>
+</div>
+</div>
 
-        </div>
+<!-- q18 -->
+ <div class="row">
+   <div class="col s12">
+    <h5>How long does it take each time? (minute)
+</h5>
+     <div class="input-field inline">
+       <input id="dryerlength" type="text" class="validate">
+       <label for="dryerlength">Min</label>
+  </div>
+</div>
+</div>
+
+<!-- q19 -->
+ <div class="row">
+   <div class="col s12">
+    <h5>What’s the size of the television in your house?</h5>
+    <div class="col s12">
+       <select class="chosenone" id="tvsize">
+         <option value="" disabled selected>Choose your option</option>
+         <option value="30-39">30"-39"</option>
+         <option value="40-49">40"-49"</option>
+         <option value="50-56">50"-56"</option>
+       </select>
+     </div>
+</div>
+</div>
+
+<!-- q20 -->
+ <div class="row">
+   <div class="col s12">
+    <h5>What type of display does it have?</h5>
+    <div class="col s12">
+       <select class="chosenone" id="tvdisplay">
+         <option value="" disabled selected>Choose your option</option>
+         <option value="LCD">LCD</option>
+         <option value="Plasma">Plasma</option>
+
+         <option value="noidea">I do not know</option>
+       </select>
+     </div>
+</div>
+</div>
+
+<!-- q21 -->
+ <div class="row">
+   <div class="col s12">
+    <h5>Thinking about your most used television’s use, how many hours is it turned on each day? Include the time it is on even if no one is actually watching it.
+</h5>
+     <div class="input-field inline">
+       <input id="tvlength" type="text" class="validate">
+       <label for="tvlength">Hour</label>
+  </div>
+</div>
+</div>
+
+<!-- q22 -->
+ <div class="row">
+   <div class="col s12">
+    <h5>How many of each of the following are used in your home? If none, please enter “0.”</h5>
+
+    <div class = "row">
+      <div class = "col s6">
+        <h5> Number of desktop computers </h5>
+        <div class="input-field inline">
+          <input id="desktopnum" type="text" class="validate">
+     </div>
+      </div>
+      <div class = "col s6">
+        <h5> Time of usage each day </h5>
+        <div class="input-field inline">
+          <input id="desktoplength" type="text" class="validate">
+          <label for="desktoplength">Hour</label>
+     </div>
+
       </div>
     </div>
 
-       <div class="row">
-         <div class="col s12">
-          <h5>how many ovens do you have in your house?(0 for none)</h5>
-           <div class="input-field inline">
-             <input id="ovennum" type="text" class="validate">
-        </div>
+    <div class = "row">
+      <div class = "col s6">
+        <h5> Number of laptop computers </h5>
+        <div class="input-field inline">
+          <input id="laptopnum" type="text" class="validate">
+     </div>
+      </div>
+      <div class = "col s6">
+        <h5> Time of usage each day </h5>
+        <div class="input-field inline">
+          <input id="laptoplength" type="text" class="validate">
+          <label for="laptoplength">Hour</label>
+     </div>
+
       </div>
     </div>
 
-
-			    <button class="btn-large waves-effect waves-light" type="submit" name="action" id="submit">Submit
-    				<i class="material-icons right">send</i>
-  				</button>
-    		</form>
-  		</div>
-		</div>
-
-<!--modal---->
-
-
-<!-- <div id="modal1" class="modal">
-  	<div class="modal-header">
-  	</div>
-    <div class="modal-content center-align">
-    	<h3>Your energy consuption bar consists of  </h3>
-    	<hr>
-      <h4 id="redblock">Red Blocks : </h4>
-      <h4 id="whiteblock">White Blocks : </h4>
+    <div class = "row">
+      <div class = "col s6">
+        <h5> Number of tablet computers or e-readers(ie. iPad or Kindle) </h5>
+        <div class="input-field inline">
+          <input id="tabnum" type="text" class="validate">
+     </div>
+      </div>
+      <div class = "col s6">
+        <h5> Number of smartphones </h5>
+        <div class="input-field inline">
+          <input id="phonenum" type="text" class="validate">
+     </div>
+      </div>
     </div>
-  </div> -->
+
+</div>
+</div>
+
+<!-- q23 -->
+ <div class="row">
+   <div class="col s12">
+    <h5>Is any air conditioning equipment used in your house?</h5>
+    <div class="col s12">
+       <select class="chosenone" id="actype">
+         <option value="" disabled selected>Choose your option</option>
+         <option value="central">Central</option>
+         <option value="window">Window</option>
+       </select>
+     </div>
+</div>
+</div>
 
 
-  <!-- Modal Trigger -->
+<!-- q24-->
+ <div class="row">
+   <div class="col s12">
+    <h5>How long is it turned on each day? (hour)
+</h5>
+     <div class="input-field inline">
+       <input id="aclength" type="text" class="validate">
+       <label for="aclength">Hour</label>
+  </div>
+</div>
+</div>
 
- <!-- Modal Structure -->
- <div id="modal1" class="modal">
+
+  <button class="btn-large waves-effect waves-light" type="submit" id="submit" data-toggle="modal" data-target="#modal1">Submit
+		<i class="material-icons right">send</i>
+	</button>
+</form>
+</div>
+</div>
+
+ <!-- <div id="modal1" class="modal fade">
    <div class="modal-content">
      <h4>Your Engergy Bar consists of :</h4>
      <div class="input-color">
@@ -150,7 +396,6 @@ img{
            <div class = "legend" style = "float: right"> 5 Orange </div>
        </div>
      </br>
-
      <div class="input-color">
        <div class = "legend" style = "float: right"> 3 Navy </div>
            <div class="color-box" style="background-color: navy;"></div>
@@ -163,7 +408,33 @@ img{
        </div>
      </br>
    </div>
+ </div> -->
 
+ <div class="modal fade" id="modal1" tabindex="-1" role="dialog"
+     aria-labelledby="employee-search-Label" aria-hidden="true">
+     <div class="modal-dialog" role="document">
+         <div class="modal-content">
+             <div class="modal-header">
+                 <h5 class="modal-title" id="employee-search-label">Your Energy Consumption is</h5>
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                 </button>
+             </div>
+             <div class="modal-body">
+               <div class = "row">
+                 <div class="col s6" id = "showdata">
+
+                 </div>
+                 <div class="col s6" id = "watts">
+                    Watts
+                 </div>
+               </div>
+             </div>
+             <div class="modal-footer">
+                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+             </div>
+         </div>
+     </div>
  </div>
 
 
@@ -171,7 +442,7 @@ img{
 var userData;
 $(document).ready(function() {
     $('select').material_select();
-	});
+
 
   $("#submit").on("click", function(event){
     // check if all the fields are filled
@@ -187,48 +458,165 @@ $(document).ready(function() {
 			  	console.log("text not filled");
 		  });
 		  return isValid;
-		}
-
-
-		if (validateForm()) {
-    	 userData = {
-    		fridgenum: $("#fridgenum").val().trim(),
-        stovenum: $("#stovenum").val().trim(),
-        cooknum: $("#cooknum").val().trim(),
-        cooktime: $("#cooktime").val().trim(),
-        ovennum: $("#ovennum").val().trim(),
-    	};
-
-      //
-      // $.post("/api/data", userData, function(data){
-      //   //  convert the energy
-    	// 	$("#redblock").text("3");
-    	// 	$('#whiteblock').text("4");
-      //
-	    //   $("#modal1").openModal();
-    	// });
-      console.log(userData.fridgenum);
-
-      $(document).on("click", "#submit", function (userData) {
-        // $("#redblock").text(userData.fridgenum);
-        // $('#whiteblock').append(userData.fuel);
-         $("#modal1").openModal();
+		};
 
 
 
+		if (validateForm()){
+      var fridgenum = $("#fridgenum").val();
+      var cooktime  =  $("#cooktime").val();
+      var cooklength = $("#cooklength").val();
+      var stovenum = $("#stovenum").val();
+      var ovennum = $("#ovennum").val();
+      var oventime = $("#oventime").val();
+      var toastertime = $("#toastertime").val();
+      var toasterlength = $("#toasterlength").val();
+      var microlength = $("#microlength").val();
+      var dishtime = $("#dishtime").val();
+      var dishlength = $("#dishlength").val();
+      var washertime =  $("#washertime").val();
+      var washerlength = $("#washerlength").val();
+      var dryertime = $("#washerlength").val();
+      var dryerlength = $("#dryerlength").val();
 
 
-});
+
+      var tvlength = $("#tvlength").val();
+      var desktopnum = $("#desktopnum").val();
+      var desktoplength = $("#desktoplength").val();
+      var laptopnum = $("#laptopnum").val();
+      var laptoplength = $("#laptoplength").val();
+      var tabnum = $("#tabnum").val();
+      var phonenum = $("#phonenum").val();
+
+      var actype = $("#actype").val();
+      var aclength = $("#aclength").val();
+
+
+
+      var stovefuel = $("#stovefuel option:selected").val();
+      var ovenfuel = $("#ovenfuel option:selected").val();
+      var dryerfuel = $("#dryerfuel option:selected").val();
+      var tvsize = $("#tvsize option:selected").val();
+      var tvdisplay = $("#tvdisplay option:selected").val();
 
       var form = document.getElementById("myForm");
       form.reset();
 		}
 
-    else {
+    else{
 			alert("Please fill out the empty field!");
 		}
 
+
+// calculate userData
+
+    var kitchen =  fridgenum*1400*365 + stovenum*cooktime*52*cooklength*1500/60 +
+    ovennum*oventime*52*1200/60 + toastertime*52*toasterlength*850/60 + microlength*1000/60*300
+    + dishtime*52*dishlength*1300/60;
+
+    var laundry = washertime*52*washerlength*800/60 + dryertime*dryerlength*52*3000/60;
+
+    var Electronics;
+
+    var tv,display;
+
+    var AC = 0;
+
+    if (tvsize == "30-39"){
+      console.log("akdhhaskdsakdhas");
+          switch(tvdisplay){
+          case "LCD":
+                  display = 150;
+                  break;
+          case"Plasma":
+                  display = 200 ;
+                  break;
+          case "noidea":
+                display = 175;
+                break;
+        }
+
+    }else if (tvsize == "40-49"){
+      switch(tvdisplay){
+        case "LCD":
+                display = 175;
+                break;
+        case"Plasma":
+                display = 250 ;
+                break;
+        case "noidea":
+              display = 200;
+              break;
+      }
+    }else{
+      switch(display){
+        case "LCD":
+                display = 250;
+                break;
+        case"Plasma":
+                display = 350 ;
+                break;
+        case "noidea":
+              display = 300;
+              break;
+      }
+    }
+
+    tv = display * tvlength * 365;
+    Electronics = tv + desktopnum*desktoplength*350*365 + laptopnum*laptoplength*100*365
+                    + tabnum*8*10*365 + phonenum*6*14*365 + display;
+
+    if (actype=="Central"){
+       AC = 3500*365*aclength;
+    }
+    else{
+      AC = 2000*365*aclength;
+    }
+      var Total = kitchen + laundry + Electronics + AC;
+
+      $("#showdata").text(Total);
+
+      console.log(kitchen);
+      console.log(laundry);
+      console.log(display);
+      console.log(Electronics);
+      console.log(AC);
+      console.log(Total);
   });
+
+});
+  // id names:
+  // fridgenum
+  // stovefuel
+  // cooktime
+  // cooklength
+  // stovenum
+  // stovefuel
+  // ovennum
+  // oventime
+  // toastertime
+  // toasterlength
+  // microlength
+  // dishtime
+  // dishlength
+  // washertime
+  // washerlength
+  // dryerfuel
+  // dryertime
+  // dryerlength
+  // tvsize
+  // tvdisplay
+  // tvlength
+  // desktopnum
+  // desktoplength
+  // laptopnum
+  // laptoplength
+  // tabnum
+  // phonenum
+  // actype
+  // aclength
+
 </script>
 </body>
 </html>
