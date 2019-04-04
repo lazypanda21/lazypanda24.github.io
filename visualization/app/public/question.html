@@ -174,7 +174,7 @@
 <!-- q12 -->
  <div class="row">
    <div class="col s12">
-    <h5>How often do you use your dishwasher? (0 for none)</h5>
+    <h5>How often do you use your dishwasher each week? (0 for none)</h5>
      <div class="input-field inline" required>
        <input id="dishtime" type="text" class="validate">
   </div>
@@ -184,7 +184,7 @@
 <!-- q13 -->
  <div class="row">
    <div class="col s12">
-    <h5>How long does it typically take you to use the dishwasher each day? (minute)</h5>
+    <h5>How long does it typically take you to use the dishwasher each time? (minute)</h5>
      <div class="input-field inline" required>
        <input id="dishlength" type="text" class="validate">
        <label for="dishlength">Min</label>
@@ -422,7 +422,7 @@
 
                <div class = "row">
                  <div class="col m6" id = "totalnum">
-                    
+
                  </div>
                  <div class="col m6" id = "image">
                       <img src="lego.png" style = "height:300px;width:350px"alt="lego">
@@ -595,10 +595,15 @@ $(document).ready(function() {
       // console.log(AC);
       // console.log(Total);
 
-      var redforkitchen = Math.ceil(kitchen/Total*10);
-      var blueforlaundry = Math.ceil(laundry/Total*10);
-      var greenforelectronics = Math.ceil(Electronics/Total*10);
-      var yellowforac = Math.ceil(AC/Total*10);
+      var redforkitchen = Math.ceil((kitchen/Total)*10);
+
+      var blueforlaundry = Math.ceil((laundry/Total)*10);
+
+      var greenforelectronics = Math.ceil((Electronics/Total)*10);
+
+      var yellowforac = Math.ceil((AC/Total)*10);
+
+      console.log(kitchen, laundry,Electronics,AC);
 
       console.log(redforkitchen,blueforlaundry,greenforelectronics,yellowforac);
 
