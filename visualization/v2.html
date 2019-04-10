@@ -19,7 +19,6 @@
            src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
         </script>
-<script src = ""index.js""></script>
 </head>
 
 <style>
@@ -485,7 +484,7 @@
 
                  </div>
                  <div class="col m6" >
-                      <canvas id="lego" width="50" height="500"></canvas>
+                      <canvas style= "padding-left: 100px;" id="lego" width="50" height="300"></canvas>
                  </div>
                </div>
 
@@ -510,7 +509,7 @@
 var userData;
 var legoarr = [];
 var red, blue, green, yellow;
-const DEPLOY_PATH = '/lego-calc'
+const DEPLOY_PATH = 'https://raw.githubusercontent.com/bridger-herman/lego-calc/master';
 const IMG_PATH = DEPLOY_PATH + '/img/';
 const IMG_EXT = '.png';
 const NAMES = [
@@ -519,6 +518,7 @@ const NAMES = [
   'lego_green_small',
   'lego_red_small',
 ];
+
 const CANVAS = document.getElementById('lego');
 
 $(document).ready(function() {
@@ -598,12 +598,12 @@ $(document).ready(function() {
            laptopnum ,
          tabnum ,
            phonenum ,
-
          stovefuel ,
        ovenfuel ,
         dryerfuel ,
            tvsize ,
          tvdisplay )
+
 // calculate userData
 
 //if they choose other than Electricity
@@ -679,7 +679,7 @@ $(document).ready(function() {
               break;
       }
     }
-
+    // calculation for all different categories
     tv = display * tvlength * 365;
     Electronics = tv + desktopnum*desktoplength*350*365 + laptopnum*laptoplength*100*365
                     + tabnum*8*10*365 + phonenum*6*14*365 + display;
@@ -726,6 +726,8 @@ $(document).ready(function() {
       var lol = legototal + red + blue + green + yellow;
       $("#totalnum").append(lol);
 
+      // plot the lego pieces
+      plotLegos([1,2,3,4]);
 
 
   });
@@ -741,10 +743,10 @@ $(document).ready(function() {
     for (var i in NAMES) {
       let img = document.getElementById(NAMES[i]);
       for (var piece = 0; piece < values[i]; piece++) {
-        let yCoord = img.height * 0.3 * pieceCount;
-        ctx.drawImage(img, 0, yCoord, 50, 50);
-        ctx.moveTo(25, yCoord + 10);
-        ctx.lineTo(25, yCoord);
+        let yCoord = img.height * 0.15 * pieceCount;
+        ctx.drawImage(img, 0, yCoord, 25, 25);
+        ctx.moveTo(12.5, yCoord + 10);
+        ctx.lineTo(12.5, yCoord);
         pieceCount++;
       }
     }
@@ -763,7 +765,7 @@ $(document).ready(function() {
       img.onload = () => {
         loaded++;
         if (loaded === NAMES.length) {
-          plotLegos(legoarr);
+          plotLegos([1,2,3,4]);
         }
       }
     }
