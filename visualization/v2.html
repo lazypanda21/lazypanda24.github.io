@@ -4,16 +4,22 @@
   <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<title>Energy Consumption</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <link rel = "stylesheet"
+           href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+        <script type = "text/javascript"
+           src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+        </script>
+<script src = ""index.js""></script>
 </head>
 
 <style>
@@ -46,7 +52,7 @@
 <body>
 
 		<div class="container">
-			<h2 class="center survey">Survey Questions</h2>
+			<h3 class="center survey">Survey Questions</h3>
 			<hr>
 
 		  <div class="row">
@@ -64,7 +70,7 @@
         <!-- q2 -->
        <div class="row">
          <h5>What fuel does your stove use?</h5>
-         <div class="col s12">
+         <div class=" col s12">
             <select class="chosenone" id="stovefuel" required>
               <option value="" disabled selected>Choose your option</option>
               <option value="Electricity">Electricity </option>
@@ -73,20 +79,26 @@
             </select>
           </div>
       </div>
-    </div>
+
       <!-- q3 -->
 		  <div class="row">
   			<h5>How many times per week do you use the stove at home?(0 for None)</h5>
         <div class="col s12">
-          <div class="input-field inline" required>
-            <input id="cooktime" type="text" class="validate">
+            <select class="chosenone" id="cooktime" required>
+              <option value="" disabled selected>Choose your option</option>
+              <option value="0"> 0 </option>
+              <option value="2">1 - 3 </option>
+              <option value="5">4 - 6</option>
+              <option value="8">7 - 9</option>
+              <option value="10">above 9</option>
+            </select>
        </div>
-     </div>
+
 		  </div>
       <!-- q4 -->
       <div class="row">
         <div class="col s12">
-          <h5>How long does it typically take you to cook on stove each day? (minute)</h5>
+          <h5>How long does it typically take you to cook on stove each day? (in minute)</h5>
           <div class="input-field inline" required>
             <input id="cooklength" type="text" class="validate" >
             <label for="cooklength">Min</label>
@@ -94,19 +106,19 @@
      </div>
    </div>
         <!-- q5 -->
-       <!-- <div class="row">
+       <div class="row">
          <div class="col s12">
            <h5>How many stoves do you turn on when you cook?</h5>
            <div class="input-field inline" required>
              <input id="stovenum" type="text" class="validate" >
         </div>
       </div>
-    </div> -->
+    </div>
       <!-- q6 -->
        <div class="row">
          <div class="col s12">
           <h5>What fuel does your oven use?</h5>
-          <div class="col s12" required>
+          <div class="input-field col s12" required>
              <select class="chosenone" id="ovenfuel">
                <option value="" disabled selected>Choose your option</option>
                <option value="Electricity">Electricity </option>
@@ -121,10 +133,17 @@
      <div class="row">
        <div class="col s12">
         <h5>How many times per week do you use the oven at home?(0 for None)</h5>
-         <div class="input-field inline" required>
-           <input id="ovennum" type="text" class="validate">
-      </div>
+        <div class="input-field col s12" required>
+        <select class="chosenone" id="ovennum" required>
+          <option value="" disabled selected>Choose your option</option>
+          <option value="0"> 0 </option>
+          <option value="1">1 - 3 </option>
+          <option value="4">4 - 6</option>
+          <option value="7">7 - 9</option>
+          <option value="9">above 9</option>
+        </select>
     </div>
+       </div>
   </div>
 
   <!-- q8 -->
@@ -142,9 +161,16 @@
  <div class="row">
    <div class="col s12">
     <h5>How often do you use the toaster at home on a weekly base? (0 for none)</h5>
-     <div class="input-field inline" required>
-       <input id="toastertime" type="text" class="validate">
-  </div>
+    <div class="input-field col s12" required>
+    <select class="chosenone" id="toastertime" required>
+      <option value="" disabled selected>Choose your option</option>
+      <option value="0"> 0 </option>
+      <option value="1">1 - 3 </option>
+      <option value="4">4 - 6</option>
+      <option value="7">7 - 9</option>
+      <option value="9">above 9</option>
+    </select>
+    </div>
 </div>
 </div>
 
@@ -195,9 +221,16 @@
  <div class="row">
    <div class="col s12">
     <h5>How many times do you use clothes washer per week? (0 for none)</h5>
-     <div class="input-field inline" required>
-       <input id="washertime" type="text" class="validate">
-  </div>
+    <div class="input-field col s12" required>
+    <select class="chosenone" id="washertime" required>
+      <option value="" disabled selected>Choose your option</option>
+      <option value="0"> 0 </option>
+      <option value="1">1 - 3 </option>
+      <option value="4">4 - 6</option>
+      <option value="7">7 - 9</option>
+      <option value="9">above 9</option>
+    </select>
+</div>
 </div>
 </div>
 
@@ -230,8 +263,15 @@
  <div class="row">
    <div class="col s12">
     <h5>How many times do you use clothes dryer per week? (0 for none)</h5>
-     <div class="input-field inline" required>
-       <input id="dryertime" type="text" class="validate">
+    <div class="col s12" required>
+    <select class="chosenone" id="dryertime" required>
+      <option value="" disabled selected>Choose your option</option>
+      <option value="0"> 0 </option>
+      <option value="2">1 - 3 </option>
+      <option value="5">4 - 6</option>
+      <option value="9">7 - 9</option>
+      <option value="10">above 9</option>
+    </select>
   </div>
 </div>
 </div>
@@ -251,7 +291,7 @@
  <div class="row">
    <div class="col s12">
     <h5>What’s the size of the television in your house?</h5>
-    <div class="col s12">
+    <div class="input-field col s12">
        <select class="chosenone" id="tvsize" required>
          <option value="" disabled selected>Choose your option</option>
          <option value="None"> I do not have a TV </option>
@@ -267,7 +307,7 @@
  <div class="row">
    <div class="col s12">
     <h5>What type of display does it have?</h5>
-    <div class="col s12">
+    <div class="input-field col s12">
        <select class="chosenone" id="tvdisplay" required>
          <option value="" disabled selected>Choose your option</option>
          <option value="nodisplay">None if you do not have a TV</option>
@@ -294,14 +334,21 @@
 <!-- q22 -->
  <div class="row">
    <div class="col s12">
-    <h5>How many of each of the following are used in your home? If none, please enter “0.”</h5>
+    <h5>How many of each of the following are used in your home? If none, please enter “0”</h5>
 
     <div class = "row">
       <div class = "col s6">
         <h5> Number of desktop computers </h5>
-        <div class="input-field inline" required>
-          <input id="desktopnum" type="text" class="validate">
-     </div>
+        <div class="input-field col s12" required>
+        <select class="chosenone" id="desktopnum" required>
+          <option value="" disabled selected>Choose your option</option>
+          <option value="0"> 0 </option>
+          <option value="1">1 </option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">above 3</option>
+        </select>
+    </div>
       </div>
       <div class = "col s6">
         <h5> Time of usage each day </h5>
@@ -316,9 +363,14 @@
     <div class = "row">
       <div class = "col s6">
         <h5> Number of laptop computers </h5>
-        <div class="input-field inline" required>
-          <input id="laptopnum" type="text" class="validate">
-     </div>
+        <select class="chosenone" id="laptopnum" required>
+          <option value="" disabled selected>Choose your option</option>
+          <option value="0"> 0 </option>
+          <option value="1">1 </option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">above 3</option>
+        </select>
       </div>
       <div class = "col s6">
         <h5> Time of usage each day </h5>
@@ -333,15 +385,25 @@
     <div class = "row">
       <div class = "col s6">
         <h5> Number of tablet computers or e-readers(ie. iPad or Kindle) </h5>
-        <div class="input-field inline" required>
-          <input id="tabnum" type="text" class="validate">
-     </div>
+        <select class="chosenone" id="tabnum" required>
+          <option value="" disabled selected>Choose your option</option>
+          <option value="0"> 0 </option>
+          <option value="1">1 </option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">above 3</option>
+        </select>
       </div>
       <div class = "col s6">
         <h5> Number of smartphones </h5>
-        <div class="input-field inline" required>
-          <input id="phonenum" type="text" class="validate">
-     </div>
+        <select class="chosenone" id="phonenum" required>
+          <option value="" disabled selected>Choose your option</option>
+          <option value="0"> 0 </option>
+          <option value="1">1 </option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">above 3</option>
+        </select>
       </div>
     </div>
 
@@ -352,7 +414,7 @@
  <div class="row">
    <div class="col s12">
     <h5>Is any air conditioning equipment used in your house?</h5>
-    <div class="col s12">
+    <div class="input-field col s12">
        <select class="chosenone" id="actype" required>
          <option value="" disabled selected>Choose your option</option>
          <option value="central">Central</option>
@@ -422,9 +484,8 @@
                  <div class="col m6" id = "totalnum">
 
                  </div>
-                 <div class="col m6" id = "image">
-                      <img src="lego.png" style = "height:300px;width:350px"alt="lego">
-                      <p class = "center">Color Scheme </p>
+                 <div class="col m6" >
+                      <canvas id="lego" width="50" height="500"></canvas>
                  </div>
                </div>
 
@@ -447,9 +508,21 @@
 
 <script>
 var userData;
-$(document).ready(function() {
-    $('select').material_select();
+var legoarr = [];
+var red, blue, green, yellow;
+const DEPLOY_PATH = '/lego-calc'
+const IMG_PATH = DEPLOY_PATH + '/img/';
+const IMG_EXT = '.png';
+const NAMES = [
+  'lego_gray_small',
+  'lego_blue_small',
+  'lego_green_small',
+  'lego_red_small',
+];
+const CANVAS = document.getElementById('lego');
 
+$(document).ready(function() {
+   $('select').material_select();
 
   $("#submit").on("click", function(event){
     // check if all the fields are filled
@@ -471,35 +544,33 @@ $(document).ready(function() {
 
 		if (validateForm()){
       var fridgenum = $("#fridgenum").val();
-      var cooktime  =  $("#cooktime").val();
       var cooklength = $("#cooklength").val();
-      var stovenum = $("#stovenum").val();
       var ovennum = $("#ovennum").val();
-      var oventime = $("#oventime").val();
-      var toastertime = $("#toastertime").val();
       var toasterlength = $("#toasterlength").val();
       var microlength = $("#microlength").val();
-      var dishtime = $("#dishtime").val();
       var dishlength = $("#dishlength").val();
-      var washertime =  $("#washertime").val();
       var washerlength = $("#washerlength").val();
-      var dryertime = $("#washerlength").val();
       var dryerlength = $("#dryerlength").val();
 
-
-
       var tvlength = $("#tvlength").val();
-      var desktopnum = $("#desktopnum").val();
       var desktoplength = $("#desktoplength").val();
-      var laptopnum = $("#laptopnum").val();
       var laptoplength = $("#laptoplength").val();
-      var tabnum = $("#tabnum").val();
-      var phonenum = $("#phonenum").val();
 
       var actype = $("#actype").val();
       var aclength = $("#aclength").val();
 
 
+      var cooktime  =  $("#cooktime option:selected").val();
+      var stovenum = $("#stovenum").val();
+      var oventime = $("#oventime ").val();
+      var toastertime = $("#toastertime option:selected").val();
+      var dishtime = $("#dishtime ").val();
+      var washertime =  $("#washertime option:selected").val();
+      var dryertime = $("#dryertime option:selected").val();
+      var desktopnum = $("#desktopnum option:selected").val();
+      var laptopnum = $("#laptopnum option:selected").val();
+      var tabnum = $("#tabnum option:selected").val();
+      var phonenum = $("#phonenum option:selected").val();
 
       var stovefuel = $("#stovefuel option:selected").val();
       var ovenfuel = $("#ovenfuel option:selected").val();
@@ -515,8 +586,38 @@ $(document).ready(function() {
 			alert("Please fill out the empty field!");
 		}
 
+    console.log("whats ballll",
+         cooktime ,
+           stovenum ,
+           oventime ,
+          toastertime ,
+           dishtime,
+           washertime ,
+         dryertime ,
+           desktopnum ,
+           laptopnum ,
+         tabnum ,
+           phonenum ,
 
+         stovefuel ,
+       ovenfuel ,
+        dryerfuel ,
+           tvsize ,
+         tvdisplay )
 // calculate userData
+
+//if they choose other than Electricity
+    if (stovefuel != "Electricity"){
+      stovenum = 0 ;
+    }
+
+    if (ovenfuel != "Electricity"){
+      ovennum = 0;
+    }
+
+    if (dryerfuel!= "Electricity"){
+      dryertime = 0;
+    }
 
     var kitchen =  fridgenum*1400*365 + stovenum*cooktime*52*cooklength*1500/60 +
     ovennum*oventime*52*1200/60 + toastertime*52*toasterlength*850/60 + microlength*1000/60*300
@@ -536,8 +637,8 @@ $(document).ready(function() {
     if (tvsize == "30-39"){
 
           switch(tvdisplay){
-          case "nodisplay":
-                  display = 0;
+            case "nodisplay":
+                    display = 0;
           case "LCD":
                   display = 150;
                   break;
@@ -592,7 +693,7 @@ $(document).ready(function() {
       var Total = (kitchen + laundry + Electronics + AC);
       var totalinkw = Math.round(Total/1000);
       var displaykw = ("<h4> Your Estimate total energy usage is  ") +
-                      totalinkw + ("  KW  </h4>")
+                      totalinkw + ("  KW  in a year</h4>")
       $("#showdata").append(displaykw);
       //
       // console.log(kitchen);
@@ -618,13 +719,58 @@ $(document).ready(function() {
 
 
       var legototal = ("<p>You will need ") + legonum + (" pieces lego in total </p>");
-      var red = ("<p> You need ") + redforkitchen + (" red pieces lego </p>");
-      var blue = ("<p> You need ") + blueforlaundry + (" blue pieces lego </p>");
-      var green =  ("<p> You need ") + greenforelectronics + (" green pieces lego </p>");
-      var yellow = ("<p> You need ") + yellowforac + (" yellow pieces lego </p>");
+       red = ("<p> You need ") + redforkitchen + (" red pieces lego </p>");
+       blue = ("<p> You need ") + blueforlaundry + (" blue pieces lego </p>");
+       green =  ("<p> You need ") + greenforelectronics + (" green pieces lego </p>");
+       yellow = ("<p> You need ") + yellowforac + (" yellow pieces lego </p>");
       var lol = legototal + red + blue + green + yellow;
       $("#totalnum").append(lol);
+
+
+
   });
+
+
+
+  // Values is an array of integers, representing number of legos for each
+  // category
+  function plotLegos(values) {
+    let ctx = CANVAS.getContext('2d');
+    let pieceCount = 0;
+    ctx.beginPath();
+    for (var i in NAMES) {
+      let img = document.getElementById(NAMES[i]);
+      for (var piece = 0; piece < values[i]; piece++) {
+        let yCoord = img.height * 0.3 * pieceCount;
+        ctx.drawImage(img, 0, yCoord, 50, 50);
+        ctx.moveTo(25, yCoord + 10);
+        ctx.lineTo(25, yCoord);
+        pieceCount++;
+      }
+    }
+    ctx.stroke();
+  }
+
+  function init() {
+    var loaded = 0;
+    for (var i in NAMES) {
+      let img = document.createElement('img');
+      img.id = NAMES[i];
+      img.src = IMG_PATH + NAMES[i] + IMG_EXT;
+      img.style.display = 'none';
+      document.body.appendChild(img);
+
+      img.onload = () => {
+        loaded++;
+        if (loaded === NAMES.length) {
+          plotLegos(legoarr);
+        }
+      }
+    }
+  }
+
+  window.onload = init;
+
 
 });
   // id names:
@@ -658,6 +804,8 @@ $(document).ready(function() {
   // actype
   // aclength
 
+
 </script>
+
 </body>
 </html>
