@@ -176,7 +176,7 @@
 <!-- q10 -->
  <div class="row">
    <div class="col s12">
-    <h5>How many minutes total do you use the microwave each day?</h5>
+    <h5>How many minutes total do you use the toaster each day?</h5>
      <div class="input-field inline" required>
        <input id="toasterlength" type="text" class="validate">
        <label for="toasterlength">Min</label>
@@ -187,7 +187,7 @@
 <!-- q11 -->
  <div class="row">
    <div class="col s12">
-    <h5>How many times per week do you use your dishwasher?</h5>
+    <h5>How many minutes total do you use the microwave each day?</h5>
      <div class="input-field inline" required>
        <input id="microlength" type="text" class="validate">
        <label for="microlength">Min</label>
@@ -478,18 +478,22 @@
 
                </div>
 
-
                <div class = "row">
-                 <div class="col m6" id = "totalnum">
-
+                 <div class="col m6" >
+                   <div id = "totalnum"></div>
+                   <div id = "category">
+                   </div>
                  </div>
                  <div class="col m6" >
                       <canvas style= "padding-left: 100px;" id="lego" width="50" height="300"></canvas>
                  </div>
                </div>
 
+
+
+
                <div class = "row center" >
-                 <h5> The number of lego pieces represents the weight of the energy consumption of certain category among the total.  </h5>
+                 <h5> The number of lego pieces represents the energy consumption in a certain category  </h5>
 
                </div>
              </div>
@@ -692,8 +696,8 @@ $(document).ready(function() {
     }
       var Total = (kitchen + laundry + Electronics + AC);
       var totalinkw = Math.round(Total/1000);
-      var displaykw = ("<h4> Your Estimate total energy usage is  ") +
-                      totalinkw + ("  KW  in a year</h4>")
+      var displaykw = ("<h5> Your Estimate total energy usage is  ") +
+                      totalinkw + ("  KWh  in a year</h5>")
       $("#showdata").append(displaykw);
       //
       // console.log(kitchen);
@@ -718,16 +722,26 @@ $(document).ready(function() {
       var legonum= redforkitchen + blueforlaundry + greenforelectronics + yellowforac;
 
 
-      var legototal = ("<p>You will need ") + legonum + (" pieces lego in total </p>");
+      var legototal = ("<p>--You will need ") + legonum + (" pieces lego in total </p>");
        red = ("<p> You need ") + redforkitchen + (" red pieces lego </p>");
        blue = ("<p> You need ") + blueforlaundry + (" blue pieces lego </p>");
        green =  ("<p> You need ") + greenforelectronics + (" green pieces lego </p>");
-       yellow = ("<p> You need ") + yellowforac + (" yellow pieces lego </p>");
+       yellow = ("<p> You need ") + yellowforac + (" grey pieces lego </p></br>");
       var lol = legototal + red + blue + green + yellow;
+
       $("#totalnum").append(lol);
 
+      var showbycategory = ("<p> --The yearly energy usage amount in each category is : </p>")
+                          + ("<p> Kitchen : ") + kitchen + (" KWh </p>")
+                          + ("<p> Laundry : ") + laundry + (" KWh </p>")
+                          + ("<p> Electronics : ") + Electronics + (" KWh </p>")
+                          + ("<p> Heating/AC : ") + AC + (" KWh </p>") ;
+
+      $("#category").append(showbycategory);
+
+
       // plot the lego pieces
-      plotLegos([1,2,3,4]);
+      plotLegos([yellowforac,blueforlaundry,greenforelectronics,redforkitchen]);
 
 
   });
@@ -765,7 +779,7 @@ $(document).ready(function() {
       img.onload = () => {
         loaded++;
         if (loaded === NAMES.length) {
-          plotLegos([1,2,3,4]);
+          plotLegos([yellowforac,blueforlaundry,greenforelectronics,redforkitchen]);
         }
       }
     }
