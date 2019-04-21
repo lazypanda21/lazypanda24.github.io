@@ -1,0 +1,22 @@
+.jumbotron{
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,56,1) 0%, rgba(215,255,0,1) 100%);
+
+}
+
+#house {
+  width: 500px;
+  height: 400px;
+  border: 1px solid black;
+  margin: 50px;
+}
+
+.appliance {
+  width: 100px;
+  border: 1px solid black;
+  background: #ddd;
+}
+
+.appliance>input {
+  width: 100%;
+}

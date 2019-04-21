@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Graphical choosing demo</title>
+    <link rel = "stylesheet" href = "graphical-chooser.css">
+    <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  </head>
+  <style>
+  .appliance img{
+    width: 70%;
+    height: 70%;
+    align-self: center;
+  }
+  </style>
+
+  <body>
+    <div class="jumbotron ">
+
+    <h1 class="display-4 text-center">Engergy Consumption</h1>
+  </br>
+    <p class="lead text-center">Drag the appliances you own into the house, then select your usage!</p>
+  </div>
+    <!--- start of the appliances selection-->
+    <div class = "container">
+      <div class = "row">
+        <div class="card" style="width: 20rem;">
+          <div class="card-body">
+              <h5 class="card-title">Kitchen</h5>
+              <div class=" card w-30 appliance" id="refrigerator"><img src = "./img/fridge.jpg"><p class="appliance-title">
+                Refrigerator
+              </p></div>
+              <div class="card w-30 appliance" id="electric-stove"><p class="appliance-title">Electric Stove</p></div>
+          </div>
+        </div>
+
+
+        <div class="card" style="width: 20rem;">
+          <div class="card-body">
+              <h5 class="card-title">Laundry</h5>
+              <div class="appliance" id="refrigerator"><p class="appliance-title">Refrigerator</p></div>
+              <div class="appliance" id="electric-stove"><p class="appliance-title">Electric Stove</p></div>
+          </div>
+        </div>
+
+        <div class="card" style="width: 20rem;">
+          <div class="card-body">
+              <h5 class="card-title">Electronics</h5>
+              <div class="appliance" id="refrigerator"><p class="appliance-title">Refrigerator</p></div>
+              <div class="appliance" id="electric-stove"><p class="appliance-title">Electric Stove</p></div>
+          </div>
+        </div>
+
+        <div class="card" style="width: 20rem;">
+          <div class="card-body">
+              <h5 class="card-title">Living Room</h5>
+              <div class="appliance" id="refrigerator"><p class="appliance-title">Refrigerator</p></div>
+              <div class="appliance" id="electric-stove"><p class="appliance-title">Electric Stove</p></div>
+          </div>
+        </div>
+
+        <div class="card" style="width: 20rem;">
+          <div class="card-body">
+              <h5 class="card-title">Heating/AC</h5>
+              <div class="appliance" id="refrigerator"><p class="appliance-title">Refrigerator</p></div>
+              <div class="appliance" id="electric-stove"><p class="appliance-title">Electric Stove</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+
+      <br/>
+    <br/>
+    <div  id = "house">house</div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.0.min.js"
+      integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+      crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+      integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+      crossorigin="anonymous"></script>
+    <script src="./graphicalChooser.js"></script>
+  </body>
+</html>
