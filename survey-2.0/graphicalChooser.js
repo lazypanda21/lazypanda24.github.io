@@ -1,17 +1,15 @@
 function init() {
   //$('.appliance').draggable();
-  // $('.appliance').append(
-  //   $('<input/>', {
+  // $('.appliance').append ($('<input/>', {
   //     type: 'range',
   //     min: '0',
-  //     max: '4',
-  //   })
-  //
-  // );
+  //     max: '20',
+  // }));
+
 
 
   $('#house').droppable({
-    accept: '.appliance',
+    accept: '.card w-30 appliance',
   });
 
   $('#house').on('drop', (evt, ui) => {
