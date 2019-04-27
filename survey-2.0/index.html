@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Energy Cons</title>
+    <title>Energy Consumption</title>
     <link rel = "stylesheet" href = "graphical-chooser.css">
     <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
@@ -33,13 +33,17 @@
           <div class="card-body">
               <h5 class="card-title">Kitchen</h5>
               <div class=" card w-30 appliance" id="refrigerator"><img src = "./img/fridge.jpg">
-                <p class="appliance-title">  Refrigerator</p></div>
+                <p class="appliance-title">Refrigerator</p>
+              <input class ="slider" type ="range" min = '0' max = '20'><output></output></div>
               <div class="card w-30 appliance" id="electric-stove"><img src = "./img/stove.jpg">
-                <p class="appliance-title">Electric Stove</p></div>
+                <p class="appliance-title">Electric Stove</p>
+              <input class ="slider" type ="range" min = '0' max = '20'><output></output></div>
                 <div class="card w-30 appliance" id="microwave"><img src = "./img/microwave.jpg">
-                  <p class="appliance-title">Microwave</p></div>
+                  <p class="appliance-title">Microwave</p>
+                <input class ="slider" type ="range" min = '0' max = '20'><output></output></div>
                   <div class="card w-30 appliance" id="oven"><img src = "./img/oven.jpg">
-                    <p class="appliance-title">Oven</p></div>
+                    <p class="appliance-title">Oven</p>
+                  <input class ="slider" type ="range" min = '0' max = '20'><output></output></div>
           </div>
         </div>
 
@@ -48,21 +52,29 @@
           <div class="card-body">
               <h5 class="card-title">Laundry</h5>
               <div class="card w-30 appliance" id="dryer"><img src = "./img/dryer.jpg">
-                <p class="appliance-title">Dryer</p></div>
+                <p class="appliance-title">Dryer</p>
+              <input class ="slider" type ="range" min = '0' max = '20'><output></output></div>
               <div class="card w-30 appliance" id="washer"><img src = "./img/washer.jpg">
-                <p class="appliance-title">Washer</p></div>
+                <p class="appliance-title">Washer</p>
+              <input class ="slider" type ="range" min = '0' max = '20'><output></output></div>
           </div>
         </div>
 
         <div class="card" style="width: 15rem;">
           <div class="card-body">
               <h5 class="card-title">Electronics</h5>
+
               <div class="card w-30 appliance" id="laptop"><img src = "./img/laptop.png">
-                <p class="appliance-title">Laptop</p></div>
+                <p class="appliance-title">Laptop</p>
+                  <input class ="slider" type ="range" min = '0' max = '20'><output></output></div>
+
               <div class="card w-30 appliance" id="phone"><img src = "./img/phone.jpg">
-                <p class="appliance-title">Phone</p></div>
+                <p class="appliance-title">Phone</p>
+              <input class ="slider" type ="range" min = '0' max = '20'><output></output></div>
+
                 <div class="card w-30 appliance" id="tv"><img src = "./img/tv.jpeg">
-                  <p class="appliance-title">TV</p></div>
+                  <p class="appliance-title">TV</p>
+                <input class ="slider" type ="range" min = '0' max = '20'><output></output></div>
           </div>
         </div>
 
@@ -70,16 +82,18 @@
           <div class="card-body">
               <h5 class="card-title">Heating/AC</h5>
               <div class="card w-30 appliance" id="ac"><img src = "./img/ac.jpeg">
-                <p class="appliance-title">AC</p></div>
+                <p class="appliance-title">AC</p>
+              <input class ="slider" type ="range" min = '0' max = '20'><output></output></div>
               <div class="card w-30 appliance" id="heating"><img src = "./img/heat.jpg">
-                <p class="appliance-title">Heating</p></div>
+                <p class="appliance-title">Heating</p>
+              <input class ="slider" type ="range" min = '0' max = '20'><output></output></div>
           </div>
         </div>
       </div>
       <div class="rowtwo" id = "house">
       <br/>
     <br/>
-    <img id = "widget" src = "./img/house.png">house
+    <img src = "./img/house.png" style="width: 100%; height: 100%">house
       </div>
 
 
@@ -100,7 +114,8 @@
 
 
 
-    <script>$('#refrigerator').draggable();
+    <script>
+            $('#refrigerator').draggable();
             $('#electric-stove').draggable();
             $('#microwave').draggable();
             $('#oven').draggable();
@@ -111,6 +126,28 @@
             $('#tv').draggable();
             $('#ac').draggable();
             $('#heating').draggable();
+
+            // var i,o;
+
+    //         $('.appliance-title').each(function() {
+    //
+    //               i = document.querySelector('input'),
+    //               o = document.querySelector('output');
+    //
+    //             o.innerHTML = i.value;
+    //
+    // // use 'change' instead to see the difference in response
+    //             i.addEventListener('input', function () {
+    //                         o.innerHTML = i.value;
+    //                         }, false);
+    //         });
+
+    // $('.appliance input').on('change', (evt) => {
+    //   let parentId = $(evt.target).parent().attr('id');
+    //   let name = $(`#${parentId} .appliance-title`).html();
+    //   $(`p#house-${parentId}`).html(parentId + ' ' + evt.target.value);
+    //
+    // });
 
 
 
