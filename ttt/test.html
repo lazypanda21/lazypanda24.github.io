@@ -34,16 +34,12 @@
               <h5 class="card-title">Kitchen</h5>
               <div class=" card w-30 appliance" id="refrigerator"><img src = "./img/fridge.jpg">
                 <p class="appliance-title">Refrigerator</p>
-              <input class ="slider" type ="range" min = '0' max = '20'><output></output></div>
               <div class="card w-30 appliance" id="electric-stove"><img src = "./img/stove.jpg">
                 <p class="appliance-title">Electric Stove</p>
-              <input class ="slider" type ="range" min = '0' max = '20'><output></output></div>
                 <div class="card w-30 appliance" id="microwave"><img src = "./img/microwave.jpg">
                   <p class="appliance-title">Microwave</p>
-                <input class ="slider" type ="range" min = '0' max = '20'><output></output></div>
                   <div class="card w-30 appliance" id="oven"><img src = "./img/oven.jpg">
                     <p class="appliance-title">Oven</p>
-                  <input class ="slider" type ="range" min = '0' max = '20'><output></output></div>
           </div>
         </div>
 
@@ -53,10 +49,8 @@
               <h5 class="card-title">Laundry</h5>
               <div class="card w-30 appliance" id="dryer"><img src = "./img/dryer.jpg">
                 <p class="appliance-title">Dryer</p>
-              <input class ="slider" type ="range" min = '0' max = '20'><output></output></div>
               <div class="card w-30 appliance" id="washer"><img src = "./img/washer.jpg">
                 <p class="appliance-title">Washer</p>
-              <input class ="slider" type ="range" min = '0' max = '20'><output></output></div>
           </div>
         </div>
 
@@ -66,15 +60,12 @@
 
               <div class="card w-30 appliance" id="laptop"><img src = "./img/laptop.png">
                 <p class="appliance-title">Laptop</p>
-                  <input class ="slider" type ="range" min = '0' max = '20' value = '0'><output></output></div>
 
               <div class="card w-30 appliance" id="phone"><img src = "./img/phone.jpg">
                 <p class="appliance-title">Phone</p>
-              <input class ="slider" type ="range" min = '0' max = '20' value = '0'><output></output></div>
 
                 <div class="card w-30 appliance" id="tv"><img src = "./img/tv.jpeg">
                   <p class="appliance-title">TV</p>
-                <input class ="slider" type ="range" min = '0' max = '20' value = '0'><output></output></div>
           </div>
         </div>
 
@@ -83,10 +74,8 @@
               <h5 class="card-title">Heating/AC</h5>
               <div class="card w-30 appliance" id="ac"><img src = "./img/ac.jpeg">
                 <p class="appliance-title">AC</p>
-              <input class ="slider" type ="range" min = '0' max = '20'><output></output></div>
               <div class="card w-30 appliance" id="heating"><img src = "./img/heat.jpg">
                 <p class="appliance-title">Heating</p>
-              <input class ="slider" type ="range" min = '0' max = '20'><output></output></div>
           </div>
         </div>
 
@@ -138,17 +127,6 @@
             $('#ac').draggable();
             $('#heating').draggable();
 
-            $(".slider").rendered = function(){
-              $(".slider").oninput = function() {
-                myFunction()
-              };
-            }
-
-            function myFunction() {
-              var val = $(".slider").value //gets the oninput value
-              $('output').innerHTML = val //displays this value to the html page
-              console.log(val)
-            }
 
             // var i,o;
 

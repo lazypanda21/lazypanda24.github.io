@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Energy Consumption</title>
+    <!-- <link rel = "stylesheet" href = "./graphical-chooser.css"> -->
+    <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+        <link rel = "stylesheet" href = "./mobile/jquery.mobile.custom.structure.css">
+        <link rel = "stylesheet" href = "./mobile/jquery.mobile.custom.theme.css">
+        <link rel = "stylesheet" href = "./mobile/jquery.mobile.custom.structure.min.css">
+        <link rel = "stylesheet" href = "./mobile/jquery.mobile.custom.theme.min.css">
+
+
+  </head>
+  <style>
+  .appliance img{
+    width: 70%;
+    height: 70%;
+    align-self: center;
+  }
+  .rowtwo img{
+    width: 1000px;
+    height: 500px;
+  }
+  </style>
+
+  <body>
+    <div class="jumbotron ">
+
+    <h1 class="display-4 text-center">Energy Consumption</h1>
+  </br>
+    <p class="lead text-center">Drag the appliances you own into the house, then select your usage!</p>
+  </div>
+    <!--- start of the appliances selection-->
+    <div class = "container">
+      <div class = "row">
+        <div class="card" style="width: 15rem;">
+          <div class="card-body">
+              <h5 class="card-title">Kitchen</h5>
+              <div class=" card w-30 appliance" id="refrigerator"><img src = "./img/fridge.jpg">
+                <p class="appliance-title">Refrigerator</p>
+                <form>
+    <label for="slider-2">Slider (default is "false"):</label>
+    <input type="range" name="slider-2" id="slider-2" data-highlight="true" min="0" max="100" value="50">
+</form>
+
+      <div class="rowtwo"  id = "house">
+      <br/>
+    <br/>
+    <img src = "./img/house.png" style="float:left">house
+      </div>
+    </div>
+
+
+  </body>
+</html>
+
+
+<script src = "./mobile/jquery.mobile.custom.js"></script>
+<script src = "./mobile/jquery.mobile.custom.min.js"></script>
