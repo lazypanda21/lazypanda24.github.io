@@ -40,10 +40,10 @@
               <div class=" card w-30 appliance" id="refrigerator"><img src = "./img/fridge.jpg">
                 <p class="appliance-title">Refrigerator</p>
                 <form>
-                  <label for="slider-2">Slider (default is "false"):</label>
-                  <input type="range" name="slider-2" id="slider-2" data-highlight="true" min="0" max="100" >
+                  <label for="slider-2">Hour of usage :</label>
+                  <input type="range" name="slider-2" id="slider-2" data-highlight="true" min="0" max="20" >
                   <div class="ui-block-b">
-                    <label for="output">slidechange:</label>
+                    <label for="output">Hours:</label>
                     <input data-mini="true" name="output" id="output" value="" type="text">
                   </div>
                 </form>
@@ -74,7 +74,7 @@
   integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
 </script>
 <script>
-
+$("#refrigerator").draggable();
 
 $("#slider-2").on("change", function() {
 var val = $(this).val();
