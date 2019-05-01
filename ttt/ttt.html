@@ -14,14 +14,15 @@
   </head>
   <style>
   .appliance img{
-    width: 70%;
-    height: 70%;
+    width: 40%;
+    height: 40%;
     align-self: center;
   }
   .rowtwo img{
     max-width: 1000px;
     max-height: 500px;
   }
+
   </style>
 
   <body>
@@ -34,18 +35,19 @@
     <!--- start of the appliances selection-->
     <div class = "container">
       <div class = "row">
-        <div class="card" style="width: 20rem;">
+        <div class="card" style="width: 15rem;">
           <div class="card-body">
               <h5 class="card-title">Kitchen</h5>
               <div class=" card w-30 appliance" id="refrigerator"><img src = "./img/fridge.jpg">
-                <p class="appliance-title">Refrigerator</p>
+                <p class="appliance-title text-center">Refrigerator
+                <div class="ui-block-d">
+                  <label for="output"></label>
+                  <label for="slider-2">Hour of usage</label>
+                  <input data-mini="true" name="output" id="output" value="" type="text">
+                </div>
+              </p>
                 <form>
-                 <label for="slider-2">Slider (default is "false"):</label>
-                 <input type="range" name="slider-2" id="slider-2" data-highlight="true" min="0" max="100" >
-                 <div class="ui-block-b">
-                   <label for="output">slidechange:</label>
-                   <input data-mini="true" name="output" id="output" value="" type="text">
-                 </div>
+                 <input type="range" name="slider-2" id="slider-2" data-highlight="true" min="0" max="20" >
                </form>
               </div>
           </div>
@@ -57,7 +59,7 @@
       <div class="rowtwo"  id = "house">
       <br/>
     <br/>
-    <img src = "./img/house.png" style="float:left">house
+    <img src = "./img/house.png" style="float:left">
       </div>
 
 

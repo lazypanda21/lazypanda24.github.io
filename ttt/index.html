@@ -9,8 +9,8 @@
   </head>
   <style>
   .appliance img{
-    width: 70%;
-    height: 70%;
+    width: 40%;
+    height: 40%;
     align-self: center;
   }
   .rowtwo img{
@@ -33,17 +33,56 @@
           <div class="card-body">
               <h5 class="card-title">Kitchen</h5>
               <div class=" card w-30 appliance" id="refrigerator"><img src = "./img/fridge.jpg">
-                <p class="appliance-title">Refrigerator</p>
-              <input class ="slider" type ="range" min = '0' max = '20'><output></output></div>
+                <p class="appliance-title text-center">Refrigerator
+                  <div class="ui-block-d">
+                    <label for="output"></label>
+                    <label for="slider-2">Hour of usage</label>
+                    <input data-mini="true" name="output" id="fridgeoutput" value="" type="text">
+                  </div>
+                </p>
+                  <form>
+                   <input type="range" name="slider-2" id="fridgehour" data-highlight="true" min="0" max="20" >
+                 </form>
+               </div>
+
               <div class="card w-30 appliance" id="electric-stove"><img src = "./img/stove.jpg">
-                <p class="appliance-title">Electric Stove</p>
-              <input class ="slider" type ="range" min = '0' max = '20'><output></output></div>
+                <p class="appliance-title text-center">Electric Stove</p>
+                <div class="ui-block-d">
+                  <label for="output"></label>
+                  <label for="slider-2">Hour of usage</label>
+                  <input data-mini="true" name="output" id="stoveoutput" value="" type="text">
+                </div>
+              </p>
+                <form>
+                 <input type="range" name="slider-2" id="stovehour" data-highlight="true" min="0" max="20" >
+               </form>
+              </div>
+
                 <div class="card w-30 appliance" id="microwave"><img src = "./img/microwave.jpg">
-                  <p class="appliance-title">Microwave</p>
-                <input class ="slider" type ="range" min = '0' max = '20'><output></output></div>
+                  <p class="appliance-title text-center">Microwave
+                     <div class="ui-block-d">
+                        <label for="output"></label>
+                        <label for="slider-2">Hour of usage</label>
+                        <input data-mini="true" name="output" id="microwaveoutput" value="" type="text">
+                      </div>
+                    </p>
+                      <form>
+                       <input type="range" name="slider-2" id="microwavehour" data-highlight="true" min="0" max="20" >
+                     </form>
+                    </div>
+
                   <div class="card w-30 appliance" id="oven"><img src = "./img/oven.jpg">
-                    <p class="appliance-title">Oven</p>
-                  <input class ="slider" type ="range" min = '0' max = '20'><output></output></div>
+                    <p class="appliance-title text-center">Oven
+                      <div class="ui-block-d">
+                        <label for="output"></label>
+                        <label for="slider-2">Hour of usage</label>
+                        <input data-mini="true" name="output" id="ovenoutput" value="" type="text">
+                      </div>
+                    </p>
+                      <form>
+                       <input type="range" name="slider-2" id="ovenhour" data-highlight="true" min="0" max="20" >
+                     </form>
+                    </div>
           </div>
         </div>
 
@@ -52,11 +91,32 @@
           <div class="card-body">
               <h5 class="card-title">Laundry</h5>
               <div class="card w-30 appliance" id="dryer"><img src = "./img/dryer.jpg">
-                <p class="appliance-title">Dryer</p>
-              <input class ="slider" type ="range" min = '0' max = '20'><output></output></div>
+                <p class="appliance-title text-center">Dryer
+
+                  <div class="ui-block-d">
+                    <label for="output"></label>
+                    <label for="slider-2">Hour of usage</label>
+                    <input data-mini="true" name="output" id="dryeroutput" value="" type="text">
+                  </div>
+                </p>
+                  <form>
+                   <input type="range" name="slider-2" id="dryerhour" data-highlight="true" min="0" max="20" >
+                 </form>
+                </div>
+
+
               <div class="card w-30 appliance" id="washer"><img src = "./img/washer.jpg">
-                <p class="appliance-title">Washer</p>
-              <input class ="slider" type ="range" min = '0' max = '20'><output></output></div>
+                <p class="appliance-title text-center">Washer
+                  <div class="ui-block-d">
+                    <label for="output"></label>
+                    <label for="slider-2">Hour of usage</label>
+                    <input data-mini="true" name="output" id="washeroutput" value="" type="text">
+                  </div>
+                </p>
+                  <form>
+                   <input type="range" name="slider-2" id="washerhour" data-highlight="true" min="0" max="20" >
+                 </form>
+                </div>
           </div>
         </div>
 
@@ -65,16 +125,46 @@
               <h5 class="card-title">Electronics</h5>
 
               <div class="card w-30 appliance" id="laptop"><img src = "./img/laptop.png">
-                <p class="appliance-title">Laptop</p>
-                  <input class ="slider" type ="range" min = '0' max = '20' value = '0'><output></output></div>
+                <p class="appliance-title text-center">Laptop
+
+                  <div class="ui-block-d">
+                    <label for="output"></label>
+                    <label for="slider-2">Hour of usage</label>
+                    <input data-mini="true" name="output" id="laptopoutput" value="" type="text">
+                  </div>
+                </p>
+                  <form>
+                   <input type="range" name="slider-2" id="laptophour" data-highlight="true" min="0" max="20" >
+                 </form>
+                </div>
 
               <div class="card w-30 appliance" id="phone"><img src = "./img/phone.jpg">
-                <p class="appliance-title">Phone</p>
-              <input class ="slider" type ="range" min = '0' max = '20' value = '0'><output></output></div>
+                <p class="appliance-title text-center">Phone
+
+                  <div class="ui-block-d">
+                    <label for="output"></label>
+                    <label for="slider-2">Hour of usage</label>
+                    <input data-mini="true" name="output" id="phoneoutput" value="" type="text">
+                  </div>
+                </p>
+                  <form>
+                   <input type="range" name="slider-2" id="phonehour" data-highlight="true" min="0" max="20" >
+                 </form>
+                </div>
 
                 <div class="card w-30 appliance" id="tv"><img src = "./img/tv.jpeg">
-                  <p class="appliance-title">TV</p>
-                <input class ="slider" type ="range" min = '0' max = '20' value = '0'><output></output></div>
+                  <p class="appliance-title text-center">TV
+
+                    <div class="ui-block-d">
+                      <label for="output"></label>
+                      <label for="slider-2">Hour of usage</label>
+                      <input data-mini="true" name="output" id="tvoutput" value="" type="text">
+                    </div>
+                  </p>
+                    <form>
+                     <input type="range" name="slider-2" id="tvhour" data-highlight="true" min="0" max="20" >
+                   </form>
+                  </div>
           </div>
         </div>
 
@@ -82,22 +172,35 @@
           <div class="card-body">
               <h5 class="card-title">Heating/AC</h5>
               <div class="card w-30 appliance" id="ac"><img src = "./img/ac.jpeg">
-                <p class="appliance-title">AC</p>
-              <input class ="slider" type ="range" min = '0' max = '20'><output></output></div>
+                <p class="appliance-title text-center">AC
+
+                  <div class="ui-block-d">
+                    <label for="output"></label>
+                    <label for="slider-2">Hour of usage</label>
+                    <input data-mini="true" name="output" id="acoutput" value="" type="text">
+                  </div>
+                </p>
+                  <form>
+                   <input type="range" name="slider-2" id="achour" data-highlight="true" min="0" max="20" >
+                 </form>
+                </div>
+
+
               <div class="card w-30 appliance" id="heating"><img src = "./img/heat.jpg">
-                <p class="appliance-title">Heating</p>
-              <input class ="slider" type ="range" min = '0' max = '20'><output></output></div>
+                <p class="appliance-title text-center">Heating
+
+                  <div class="ui-block-d">
+                    <label for="output"></label>
+                    <label for="slider-2">Hour of usage</label>
+                    <input data-mini="true" name="output" id="heatingoutput" value="" type="text">
+                  </div>
+                </p>
+                  <form>
+                   <input type="range" name="slider-2" id="heatinghour" data-highlight="true" min="0" max="20" >
+                 </form>
+                </div>
           </div>
         </div>
-
-        <div class="card" style="width: 15rem;">
-          <div class="card-body">
-              <h5 class="card-title" id = 'items'>Appliances in your house</h5>
-
-          </div>
-        </div>
-
-
       </div>
       <div class="rowtwo"  id = "house">
       <br/>
@@ -105,80 +208,90 @@
     <img src = "./img/house.png" style="float:left">house
       </div>
     </div>
-
-    <script
-      src="https://code.jquery.com/jquery-3.4.0.min.js"
-      integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
-      crossorigin="anonymous"></script>
-    <script
-      src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-      integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-      crossorigin="anonymous"></script>
-
-    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-
-    <script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
-
-    <script src="./jquery.ui.touch-punch.min.js"></script>
-
-    <script src = "./graphicalChooser.js"></script>
-    <script src = "./rangeslider.js"></script>
-    <script src = "./rangeslider.min.js"></script>
-
-    <script>
-            $('#refrigerator').draggable();
-            $('#electric-stove').draggable();
-            $('#microwave').draggable();
-            $('#oven').draggable();
-            $('#dryer').draggable();
-            $('#washer').draggable();
-            $('#laptop').draggable();
-            $('#phone').draggable();
-            $('#tv').draggable();
-            $('#ac').draggable();
-            $('#heating').draggable();
-
-            $(".slider").rendered = function(){
-              $(".slider").oninput = function() {
-                myFunction()
-              };
-            }
-
-            function myFunction() {
-              var val = $(".slider").value //gets the oninput value
-              $('output').innerHTML = val //displays this value to the html page
-              console.log(val)
-            }
-
-            // var i,o;
-
-    //         $('.appliance-title').each(function() {
-    //
-    //               i = document.querySelector('input'),
-    //               o = document.querySelector('output');
-    //
-    //             o.innerHTML = i.value;
-    //
-    // // use 'change' instead to see the difference in response
-    //             i.addEventListener('input', function () {
-    //                         o.innerHTML = i.value;
-    //                         }, false);
-    //         });
-
-    // $('.appliance input').on('change', (evt) => {
-    //   let parentId = $(evt.target).parent().attr('id');
-    //   let name = $(`#${parentId} .appliance-title`).html();
-    //   $(`p#house-${parentId}`).html(parentId + ' ' + evt.target.value);
-    //
-    // });
-
-
-
-
-
-
-
-    </script>
-
   </body>
 </html>
+
+
+<!--for drag to work-->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="./jquery.ui.touch-punch.min.js"></script>
+<script>
+
+    $('#refrigerator').draggable();
+    $('#electric-stove').draggable();
+    $('#microwave').draggable();
+    $('#oven').draggable();
+    $('#dryer').draggable();
+    $('#washer').draggable();
+    $('#laptop').draggable();
+    $('#phone').draggable();
+    $('#tv').draggable();
+    $('#ac').draggable();
+    $('#heating').draggable();
+
+</script>
+<!-- for rangeslider to work-->
+<script src = "./mobile/jquery.mobile.custom.js"></script>
+<script src = "./mobile/jquery.mobile.custom.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.0.min.js"
+  integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+</script>
+<script>
+var fridgehour,stovehour,microwavehour,ovenhour,dryerhour,washerhour,laptophour,phonehour,tvhour,achour,heatinghour;
+// for each slider to show value and grab the value of the hours
+$("#fridgehour").on("change", function() {
+fridgehour = $(this).val();
+$("#fridgeoutput").val(fridgehour);
+});
+
+$("#stovehour").on("change", function() {
+ stovehour = $(this).val();
+$("#stoveoutput").val(stovehour);
+});
+
+$("#microwavehour").on("change", function() {
+  microwavehour = $(this).val();
+ $("#microwaveoutput").val(microwavehour);
+ });
+
+$("#ovenhour").on("change", function() {
+ ovenhour = $(this).val();
+$("#ovenoutput").val(ovenhour);
+});
+
+$("#dryerhour").on("change", function() {
+dryerhour = $(this).val();
+$("#dryeroutput").val(dryerhour);
+});
+
+$("#washerhour").on("change", function() {
+ washerhour = $(this).val();
+$("#washeroutput").val(washerhour);
+});
+
+$("#laptophour").on("change", function() {
+  laptophour = $(this).val();
+ $("#laptopoutput").val(laptophour);
+ });
+
+$("#phonehour").on("change", function() {
+ phonehour = $(this).val();
+$("#phoneoutput").val(phonehour);
+});
+
+$("#tvhour").on("change", function() {
+ tvhour = $(this).val();
+$("#tvoutput").val(tvhour);
+});
+
+$("#achour").on("change", function() {
+ achour = $(this).val();
+$("#acoutput").val(achour);
+});
+
+$("#heatinghour").on("change", function() {
+ heatinghour = $(this).val();
+$("#heatingoutput").val(heatinghour);
+});
+  </script>
